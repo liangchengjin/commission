@@ -91,7 +91,7 @@ window.lCalendar = (function() {
                 var dateArr = {
                     yy: date.getYear(),
                     mm: date.getMonth(),
-                    dd: date.getDate() - 1
+                    dd: date.getDate() - 1,
                 };
                 if (/^\d{4}-\d{1,2}-\d{1,2}$/.test(_self.trigger.value)) {
                     rs = _self.trigger.value.match(/(^|-)\d{1,4}/g);
@@ -308,16 +308,16 @@ window.lCalendar = (function() {
                     var top = Math.floor(parseFloat(date_yy.getAttribute('top')));
                     if (!isNaN(top)) {
                         top % 2 == 0 ? (top = top) : (top = top + 1);
-                        top > 8 && (top = 8);
-                        var minTop = 8 - (passY - 1) * 2;
+                        top > 10 && (top = 10);
+                        var minTop = 10 - (passY - 1) * 2;
                         top < minTop && (top = minTop);
                         date_yy.style["-webkit-transform"] = 'translate3d(0,' + top + 'em,0)';
                         date_yy.setAttribute('top', top + 'em');
-                        yyVal = Math.abs(top - 8) / 2;
+                        yyVal = Math.abs(top - 10) / 2;
                         date_yy.setAttribute("val", yyVal);
                     } else {
-                        date_yy.style["-webkit-transform"] = 'translate3d(0,' + (8 - yyVal * 2) + 'em,0)';
-                        date_yy.setAttribute('top', 8 - yyVal * 2 + 'em');
+                        date_yy.style["-webkit-transform"] = 'translate3d(0,' + (10 - yyVal * 2) + 'em,0)';
+                        date_yy.setAttribute('top', 10 - yyVal * 2 + 'em');
                     }
                 } else {
                     return;
@@ -349,8 +349,8 @@ window.lCalendar = (function() {
                         mmVal = maxM;
                         date_mm.setAttribute("val", mmVal);
                     }
-                    date_mm.style["-webkit-transform"] = 'translate3d(0,' + (8 - (mmVal - minM) * 2) + 'em,0)';
-                    date_mm.setAttribute('top', 8 - (mmVal - minM) * 2 + 'em');
+                    date_mm.style["-webkit-transform"] = 'translate3d(0,' + (10 - (mmVal - minM) * 2) + 'em,0)';
+                    date_mm.setAttribute('top', 10 - (mmVal - minM) * 2 + 'em');
                 } else {
                     return;
                 }
@@ -366,8 +366,8 @@ window.lCalendar = (function() {
                         i += "<div class='tooth'>" + g + "</div>";
                     }
                     time_hh.innerHTML = i;
-                    time_hh.style["-webkit-transform"] = 'translate3d(0,' + (8 - hhVal * 2) + 'em,0)';
-                    time_hh.setAttribute('top', 8 - hhVal * 2 + 'em');
+                    time_hh.style["-webkit-transform"] = 'translate3d(0,' + (10 - hhVal * 2) + 'em,0)';
+                    time_hh.setAttribute('top', 10 - hhVal * 2 + 'em');
                 } else {
                     return
                 }
@@ -379,8 +379,8 @@ window.lCalendar = (function() {
                         i += "<div class='tooth'>" + g + "</div>";
                     }
                     time_mm.innerHTML = i;
-                    time_mm.style["-webkit-transform"] = 'translate3d(0,' + (8 - mmVal * 2) + 'em,0)';
-                    time_mm.setAttribute('top', 8 - mmVal * 2 + 'em');
+                    time_mm.style["-webkit-transform"] = 'translate3d(0,' + (10 - mmVal * 2) + 'em,0)';
+                    time_mm.setAttribute('top', 10 - mmVal * 2 + 'em');
                 } else {
                     return
                 }
@@ -393,8 +393,8 @@ window.lCalendar = (function() {
                         i += "<div class='tooth'>" + g + "</div>";
                     }
                     time_ss.innerHTML = i;
-                    time_ss.style["-webkit-transform"] = 'translate3d(0,' + (8 - mmVal * 2) + 'em,0)';
-                    time_ss.setAttribute('top', 8 - mmVal * 2 + 'em');
+                    time_ss.style["-webkit-transform"] = 'translate3d(0,' + (10 - mmVal * 2) + 'em,0)';
+                    time_ss.setAttribute('top', 10 - mmVal * 2 + 'em');
                 } else {
                     return
                 }
@@ -469,10 +469,10 @@ window.lCalendar = (function() {
                 }
                 var flag = (target["new_" + target.id] - target["old_" + target.id]) / (target["n_t_" + target.id] - target["o_t_" + target.id]);
                 if (Math.abs(flag) <= 0.2) {
-                    target["spd_" + target.id] = (flag < 0 ? -0.08 : 0.08);
+                    target["spd_" + target.id] = (flag < 0 ? -0.1 : 0.1);
                 } else {
                     if (Math.abs(flag) <= 0.5) {
-                        target["spd_" + target.id] = (flag < 0 ? -0.16 : 0.16);
+                        target["spd_" + target.id] = (flag < 0 ? -0.2 : 0.2);
                     } else {
                         target["spd_" + target.id] = flag / 2;
                     }
@@ -505,19 +505,19 @@ window.lCalendar = (function() {
                             }
                         }
                     }
-                    if (pos > 8) {
-                        pos = 8;
+                    if (pos > 10) {
+                        pos = 10;
                         stopGear = true;
                     }
                     switch (target.dataset.datetype) {
                         case "date_yy":
-                            var minTop = 8 - (passY - 1) * 2;
+                            var minTop = 10 - (passY - 1) * 2;
                             if (pos < minTop) {
                                 pos = minTop;
                                 stopGear = true;
                             }
                             if (stopGear) {
-                                var gearVal = Math.abs(pos - 8) / 2;
+                                var gearVal = Math.abs(pos - 10) / 2;
                                 setGear(target, gearVal);
                                 clearInterval(target["int_" + target.id]);
                             }
@@ -536,13 +536,13 @@ window.lCalendar = (function() {
                             if (yyVal == 0) {
                                 minM = _self.minM - 1;
                             }
-                            var minTop = 8 - (maxM - minM) * 2;
+                            var minTop = 10 - (maxM - minM) * 2;
                             if (pos < minTop) {
                                 pos = minTop;
                                 stopGear = true;
                             }
                             if (stopGear) {
-                                var gearVal = Math.abs(pos - 8) / 2 + minM;
+                                var gearVal = Math.abs(pos - 10) / 2 + minM;
                                 setGear(target, gearVal);
                                 clearInterval(target["int_" + target.id]);
                             }
@@ -566,13 +566,13 @@ window.lCalendar = (function() {
                             if (yyVal == 0 && _self.minM == mmVal + 1) {
                                 minD = _self.minD - 1;
                             }
-                            var minTop = 8 - (maxD - minD) * 2;
+                            var minTop = 10 - (maxD - minD) * 2;
                             if (pos < minTop) {
                                 pos = minTop;
                                 stopGear = true;
                             }
                             if (stopGear) {
-                                var gearVal = Math.abs(pos - 8) / 2 + minD;
+                                var gearVal = Math.abs(pos - 10) / 2 + minD;
                                 setGear(target, gearVal);
                                 clearInterval(target["int_" + target.id]);
                             }
@@ -583,7 +583,7 @@ window.lCalendar = (function() {
                                 stopGear = true;
                             }
                             if (stopGear) {
-                                var gearVal = Math.abs(pos - 8) / 2;
+                                var gearVal = Math.abs(pos - 10) / 2;
                                 setGear(target, gearVal);
                                 clearInterval(target["int_" + target.id]);
                             }
@@ -594,7 +594,7 @@ window.lCalendar = (function() {
                                 stopGear = true;
                             }
                             if (stopGear) {
-                                var gearVal = Math.abs(pos - 8) / 2;
+                                var gearVal = Math.abs(pos - 10) / 2;
                                 setGear(target, gearVal);
                                 clearInterval(target["int_" + target.id]);
                             }
@@ -605,7 +605,7 @@ window.lCalendar = (function() {
                                 stopGear = true;
                             }
                             if (stopGear) {
-                                var gearVal = Math.abs(pos - 8) / 2;
+                                var gearVal = Math.abs(pos - 10) / 2;
                                 setGear(target, gearVal);
                                 clearInterval(target["int_" + target.id]);
                             }
