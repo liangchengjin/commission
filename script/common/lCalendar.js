@@ -29,6 +29,7 @@ window.lCalendar = (function() {
             var _self = this;
             //呼出日期插件
             function popupDate(e) {
+                document.body.style.overflow = 'hidden';
                 _self.gearDate = document.createElement("div");
                 _self.gearDate.className = "gearDate";
                 _self.gearDate.innerHTML = '<div class="date_ctrl slideInUp">' +
@@ -49,14 +50,13 @@ window.lCalendar = (function() {
                     '</div>' +
                     '</div>' +
                     '</div>' +
-                    '<div class="bottom line-border"></div>'+
+                    '<div class="bottom-d line-border"></div>'+
                     '<div class="date_btn_box">' +               
                     '<div class="date_btn lcalendar_cancel">取消</div>' +
                     '<div class="date_btn lcalendar_finish line-border boder-left">确定</div>' +
                     '</div>' +
                     '</div>';
                 document.body.appendChild(_self.gearDate);
-                document.body.style.overflow = 'hidden';
                 dateCtrlInit();
                 var lcalendar_cancel = _self.gearDate.querySelector(".lcalendar_cancel");
                 lcalendar_cancel.addEventListener('touchstart', closeMobileCalendar);
@@ -620,8 +620,8 @@ window.lCalendar = (function() {
                 e.preventDefault();
                 var evt = new CustomEvent('input');
                 _self.trigger.dispatchEvent(evt);
-                document.body.removeChild(_self.gearDate);
                 document.body.style.overflow = 'auto';
+                document.body.removeChild(_self.gearDate);
             }
             //日期确认
             function finishMobileDate(e) {
