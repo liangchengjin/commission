@@ -19,6 +19,7 @@ button{
   width: 100%;
   height: 100%;
   overflow: auto;
+  -webkit-overflow-scrolling: touch;
   margin-top: 1.33rem;
   border-top: 1px solid #bbbbbb;
 }
