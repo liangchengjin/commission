@@ -217,7 +217,7 @@ section{
 .bottom:after{
 	border-bottom: 1px solid #ccc;
 }
-.bottom,.bottom-d,.bottom-top,.bottom-c{
+.bottom,.bottom-d,.bottom-top{
 	float: left;
     width: 100%;
 }
@@ -226,9 +226,6 @@ section{
 }
 .bottom-d:after,.top:after{
 	border-bottom: 1px solid #ddd;
-}
-.bottom-c{
-	border-bottom: 1px solid #ccc;
 }
 .bottom-top:after{
 	border-bottom: 1px solid #ddd;
