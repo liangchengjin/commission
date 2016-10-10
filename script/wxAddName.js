@@ -2,20 +2,20 @@ var productDetail = {
     init:function () {
         this.butC();
         this.leaveImg();
-        this.foucs()
+        this.foucs();
+        this.isDefault()
     },
 	leaveImg:function(){
-			$('.leave-img')[0].on('tap',function(){
-				$('.user-name')[0].value = '';			
-				$($('.leave-img')[0]).addClass('hidden');
-				productDetail.butC();
-				$('.button-end').css({
+			$('.leave-img')[0].onclick = function () {
+			$('.user-name')[0].value = '';			
+			$($('.leave-img')[0]).addClass('hidden');
+			productDetail.butC();
+			$('.button-end').css({
 				'background':'rgb(204, 204, 204)',
 				'color':'#ffffff'
-				})
 			})
-
-		$('.leave-img')[1].on('tap',function(){
+		}
+		$('.leave-img')[1].onclick = function () {
 			$('.user-tel')[0].value = '';			
 			$($('.leave-img')[1]).addClass('hidden');
 			productDetail.butC();
@@ -23,7 +23,7 @@ var productDetail = {
 				'background':'rgb(204, 204, 204)',
 				'color':'#ffffff'
 			})
-		})		
+		}
 	},
 	butC:function(){
 			var userName = $('.user-name').attr('value'),
@@ -31,7 +31,6 @@ var productDetail = {
 				userName = userName.replace(/\s+/g,"");
 				uesrTel  = uesrTel.replace(/\s+/g,"");
 			if(userName !== '' && uesrTel !== ''){
-				$('#navbar-title').html('编辑收货人');
 				$('.button-end').css({
 					    'background':'#ff9000',
 					    'color':'#ffffff'
@@ -49,9 +48,27 @@ var productDetail = {
         		$(this).siblings().removeClass('hidden');      		
         	}      	
         })
-         $(".inform-input input").on('tap',function(){
-         	$(".leave-img").addClass('hidden');
+         $(".inform-input .user-tel").on('tap',function(){
+         	$('.user-name').siblings().addClass('hidden');
          })
+         $(".inform-input .user-name").on('tap',function(){
+         	$('.user-tel').siblings().addClass('hidden');
+         })
+	},
+	isDefault:function(){
+			if($('#is_defalut').val() == 1){
+			$('.ios-switch')[0].checked = true
+		} else{
+			$('.ios-switch')[0].checked = false
+		}
+		$('label').on('tap',function(){
+
+			if($('.ios-switch')[0].checked === true){
+				$('#is_defalut').val(1)
+			}else{
+				$('#is_defalut').val(0)
+			}
+		})
 	}
 }
 

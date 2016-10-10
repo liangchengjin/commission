@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title id="title">选择收货人</title>
+    <meta name="keywords" content="">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<style type="text/css">
+		html,body{
+			background: #fff !important;
+		}		
+	</style>
+    <!--css-->
+    <link rel="stylesheet" href="stylesheets/common/reset.css">
+    <link rel="stylesheet" href="stylesheets/common/iconfont.css">
+    <link rel="stylesheet" href="stylesheets/wxChooseGoodsPoint.css">
+
+    <script src="script/common/adaptive.js"></script>
+    <script type="text/javascript">
+        window['adaptive'].desinWidth = 750;
+        window['adaptive'].baseFont = 18;
+        window['adaptive'].maxWidth = 480;
+        window['adaptive'].init();
+    </script>
+</head>
+<body>
+<!--内容区 start-->
+<section class="container-main">
+     <div class="inform-tab" id="inform-tab">
+         <div class="inform-box inform-show addrScrolls" style="margin-top: 0rem;">
+             <table class="inform-tab">
+                 <tr>
+                     <td class="td-vertical inform-click"></td>
+                     <td class="inform-click">
+                         <a href="sureOrder.html" class="inform-link">
+                             <span class="inform-selector" >
+                                 <i class="iconchoicedefault"></i>
+                             </span>
+                             <p class="inform-add">
+                             	<span class='chose_name'>李大明</span>
+                             	<span class="mobile">18805309998</span>
+                             	<span class="default_txt">默认</span>
+                             </p>
+                         </a>
+                     </td>
+                     <td>
+                         <a href="#" class="inform-update">
+                             <span>修改</span>
+                             <i class="iconfont icon-iconmoredefault"></i>
+                         </a>
+                     </td>
+                 </tr>
+                 <tr>
+                     <td class="td-vertical inform-click">
+                     </td>
+                     <td class="inform-click">
+                         <a href="#" class="inform-link">
+                              <span class="inform-selector">
+                                 <i class="iconchoicedefault"></i>
+                             </span>
+                             <p class="inform-add">
+                             	<span>李大明</span>
+                             	<span class="mobile">18805309998</span>
+                             	<span class="default_txt hidden">默认</span>
+                             </p>
+                         </a>
+                     </td>
+                     <td>
+                         <a href="#" class="inform-update">
+                             <span>修改</span>
+                             <i class="iconfont icon-iconmoredefault"></i>
+                         </a>
+                     </td>
+                 </tr>
+                 <tr>
+                     <td class="td-vertical inform-click"></td>
+                     <td class="inform-click">
+                         <a href="#" class="inform-link">
+                             <span class="inform-selector">
+                                 <i class="iconchoicedefault"></i>
+                             </span>
+                             <p class="inform-add">
+                             	<span>李大明</span>
+                             	<span class="mobile">18805309998</span>
+                             	<span class="default_txt hidden">默认</span>
+                             </p>
+                         </a>
+                     </td>
+                     <td>
+                         <a href="#" class="inform-update">
+                             <span>修改</span>
+                             <i class="iconfont icon-iconmoredefault"></i>
+                         </a>
+                     </td>
+                 </tr>
+             </table>
+         </div>
+     </div>
+</section>
+<!--内容区 end-->
+
+
+<!--底部 start-->
+ <div class="button-box">
+    <a href="#" class="footer-btn footer-btn-orang" id="footer-btn">新增</a>
+</div>
+<!--底部 end-->
+<!--js-->
+<script src="script/common/zepto.min.js"></script>
+<script src="script/common/utls.js"></script>
+<script>
+    show.butColor(".footer-btn-orang","touchstart","rgb(211,112,0)","rgb(218,208,178)");
+    show.butColor(".footer-btn-orang","touchend","#ff9000","#FFF");
+    for(var i = 0 ,len = $('.mobile').length; i < len; i++){
+    	$('.mobile')[i].innerHTML = ' ( '+$('.mobile')[i].innerHTML+' )'
+    }
+</script>
+</body>
+</html>

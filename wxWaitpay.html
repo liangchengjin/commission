@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>支付成功</title>
+    <title>等待付款</title>
     <meta name="keywords" content="">
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
@@ -21,13 +21,14 @@
     </script>
 </head>
 <body>
+<input type="hidden" name="ordertime" id="ordertime" value="1475979741" />
 <section class="container-main">
     <div class="status-area">
         <div class="text">
-           <i class="iconfont icon-iconchoice"></i>
+            <i class="iconfont icon-icon12"></i>
             <div>
-                <p>交易成功</p>
-                <p><span class="time">需补填收货信息</span></p>
+                <p>等待付款</p>
+                <p><span class="time"></span>后交易自动关闭</p>
             </div>
         </div>
     </div>
@@ -70,48 +71,6 @@
                 </div>
             </div>
         </div>
-        <div class="good-message">
-            <div class="lines"></div>
-            <div class="imgDiv"><img src="images/goods.png"></div>
-            <div class="good-message-content">
-                <div class="left">
-                    <p class="goodsName">小麦麦麦麦一碰三防套餐产品组合 (春耕解决方案 ) </p>
-                    <span>瑞功g x1 + 好鲜收含海藻酸水溶肥功g x1+好鲜收含海藻酸水料10ml x1</span>
-                </div>
-                <div class="right">
-                    <dl>¥32.50</dl>
-                    <dt>x1</dt>
-                </div>
-            </div>
-        </div>
-        <div class="good-message">
-            <div class="lines"></div>
-            <div class="imgDiv"><img src="images/goods.png"></div>
-            <div class="good-message-content">
-                <div class="left">
-                    <p class="goodsName">小麦麦麦麦一碰三防套餐产品组合 (春耕解决方案 ) </p>
-                    <span>瑞功g x1 + 好鲜收含海藻酸水溶肥功g x1+好鲜收含海藻酸水料10ml x1</span>
-                </div>
-                <div class="right">
-                    <dl>¥32.50</dl>
-                    <dt>x1</dt>
-                </div>
-            </div>
-        </div>
-        <div class="good-message">
-            <div class="lines"></div>
-            <div class="imgDiv"><img src="images/goods.png"></div>
-            <div class="good-message-content">
-                <div class="left">
-                    <p class="goodsName">小麦麦麦麦一碰三防套餐产品组合 (春耕解决方案 ) </p>
-                    <span>瑞功g x1 + 好鲜收含海藻酸水溶肥功g x1+好鲜收含海藻酸水料10ml x1</span>
-                </div>
-                <div class="right">
-                    <dl>¥32.50</dl>
-                    <dt>x1</dt>
-                </div>
-            </div>
-        </div>
         <!--<div class="good-message">-->
             <!--<div class="lines"></div>-->
             <!--<div class="imgDiv"><img src="images/goods.png"></div>-->
@@ -128,6 +87,10 @@
         <!--</div>-->
     </div>
 </div>
+<div class="leave-message-wrap hidden">
+        <input type="text" class="leave-message" placeholder="捎句话给自提点吧（点击填写）" oninput="change()">
+        <i class="iconfont icon-icondeletedefault leave-img hidden"></i>
+</div>
 <div class="countSum-wrap">
     <div class="countSum">
         共<span>1</span>件商品
@@ -139,7 +102,6 @@
     <div class="order-mes">
 		<span>订单号: <span>ZG2016081201202010</span></span>
 		<span>下单时间: <span>2016-08-16</span></span>
-		<span>付款时间：<span>2016-09-16</span></span>
     </div>
 </div>
 </section>
@@ -147,7 +109,7 @@
     <div class="countSum">
         <span class="sum">合计：</span>
         <span class="price">¥32.50</span>
-        <button class="order">确认</button>
+        <button class="order">去付款</button>
     </div>
 </div>
     <script src="script/common/zepto.min.js"></script>

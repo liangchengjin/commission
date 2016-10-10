@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <meta name="keywords" content="">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link rel="stylesheet" href="./stylesheets/common/reset.css">
+    <link href="./stylesheets/common/iconfont.css" rel="stylesheet" media="screen, projection">
+    <link rel="stylesheet" href="./stylesheets/wxPay.css">
+    <script src="script/common/adaptive.js"></script>
+    <script type="text/javascript">
+        window['adaptive'].desinWidth = 750;
+        window['adaptive'].baseFont = 18;
+        window['adaptive'].maxWidth = 480;
+        window['adaptive'].init();
+    </script>
+</head>
+<body>
+	<header>
+		<div class="attention">
+			<i class="iconfont icon-prompt"></i>
+			<span>请在5分钟内完成付款，否则您的商品有可能被抢走哦！</span>
+		</div>
+		<div class="header-money-wrap">
+			<span>应付金额：</span>
+			<p>¥<span>32.50</span></p>
+		</div>
+	</header>
+<section class="container-main">
+	<div class="payOnline">在线支付</div>
+	<a href="#" class="chose">
+        <div></div>
+         <img src="images/wxpayjsapi.png" alt="">
+        <span class="bank">
+        	<dt>微信支付</dt>
+        	<dl>微信安全支付</dl>
+        </span>
+        <span>
+            <i class="iconfont icon-iconmoredefault"></i>
+        </span>
+    </a>
+    <a href="#" class="chose">
+        <div></div>
+        <img src="images/yinlian.png" alt="">
+        <span class="bank">
+        	<dt>银联支付</dt>
+        	<dl>银联安全支付</dl>
+        </span>
+        <span>
+            <i class="iconfont icon-iconmoredefault"></i>
+        </span>
+    </a>
+    <a href="#" class="chose">
+        <div></div>
+        <img src="images/pos.png" alt="">
+        <span class="bank">
+        	<dt>POS机支付</dt>
+        	<dl>POS机支付安全支付</dl>
+        </span>
+        <span>
+            <i class="iconfont icon-iconmoredefault"></i>
+        </span>
+    </a>
+     <a href="#" class="chose">
+        <div></div>
+        <img src="images/zfb.png" alt="">
+        <span class="bank">
+        	<dt>支付宝支付</dt>
+        	<dl>支付宝安全支付</dl>
+        </span>
+        <span>
+            <i class="iconfont icon-iconmoredefault"></i>
+        </span>
+    </a>
+</section>
+<script src="script/common/zepto.min.js"></script>
+<script>    
+    var choses =  $('.chose');
+    choses.on('touchstart',function(){
+        this.style.background = '#cccccc';
+		this.children[3].style.color = '#b2b2b2'
+    });
+    choses.on('touchend',function(){
+        this.style.background = '#ffffff'
+        this.children[3].style.color = '#cccccc'
+    });
+</script>
+</body>
+</html>

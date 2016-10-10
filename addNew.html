@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title id="title">新增收货人</title>
+    <meta name="keywords" content="">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+
+    <!--css-->
+    <link rel="stylesheet" href="stylesheets/common/reset.css">
+    <link rel="stylesheet" href="stylesheets/common/iconfont.css">
+    <link rel="stylesheet" href="stylesheets/common/checkBox.css" />
+    <link rel="stylesheet" href="stylesheets/common/alert.css" />
+    <link rel="stylesheet" href="stylesheets/wxChooseGoodsPoint.css">
+    <script src="script/common/adaptive.js"></script>
+    <script type="text/javascript">
+        window['adaptive'].desinWidth = 750;
+        window['adaptive'].baseFont = 18;
+        window['adaptive'].maxWidth = 480;
+        window['adaptive'].init();
+    </script>
+</head>
+<body>
+<!--内容区 start-->
+<section class="container-main">
+     <div class="inform-tab" id="inform-tab">
+         <div class="inform-box inform-show inform-padding-left"> <!-- inform-padding-left -->
+             <table class="inform-tab">
+                 <tr>
+                     <td class="inform-user-width">
+                        <p class="inform-user-title">收货人</p>
+                     </td>
+                     <td class="tdLine">
+                         <p class="inform-input">
+                         	<input type="text" autocomplete="off" minlength="1" maxlength="10" autofocus class="inform-user-name user-name" value="" placeholder="点击输入收货人姓名">
+							<i class="iconfont icon-icondeletedefault leave-img hidden"></i>
+                         </p>
+                     </td>
+                 </tr>
+                 <tr>
+                     <td class="inform-user-width">
+                         <p class="inform-user-title">联系电话</p>
+                     </td>
+                     <td>
+                         <p class="inform-input">
+                         	<input type="tel"  autofocus autocomplete="off" minlength="1" maxlength="11" class="inform-user-name user-tel" value="" placeholder="点击输入收货人联系电话">
+                         	<i class="iconfont icon-icondeletedefault leave-img hidden"></i>
+                         </p>
+                     </td>
+                 </tr>
+             </table>
+         </div>
+     </div>
+     <div class="default">
+     	<span>设为默认</span>
+     	<label>  
+            <input type="checkbox" class="ios-switch green  bigswitch"/>
+			<div>  
+                <div></div>  
+            </div>  
+       </label>     
+     </div>
+    <div class="button-box">
+        <button type="button" class="button-end">保存</button>
+    </div>
+    <input type="hidden" id="is_defalut" name="is_defalut" value="1"/>
+</section>
+<!--内容区 end-->
+<!--js-->
+<script src="script/common/zepto.min.js"></script>
+<script src="script/common/utls.js"></script>
+<script type="text/javascript" src="script/common/wxLoading.js"></script>
+<script type="text/javascript" src="script/wxAddName.js"></script>
+</body>
+</html>
