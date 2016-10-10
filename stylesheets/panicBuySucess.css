@@ -1,0 +1,176 @@
+body {
+  font-family: "微软雅黑", "Droid Sans Fallback";
+  width: 100%;
+  height: 100%;
+  background: #ebebeb;
+}
+header{
+	padding: 0.5rem 0;
+	background: #FFF;
+	text-align: center;
+	width: 100%;
+	position: fixed;
+	top: 0;
+}
+header>i{
+	font-size: 0.46rem !important;
+	color: #FF9000;
+}
+header .title{
+	font-size: 0.42rem;
+	color: #FF9000;
+	padding-left: 0.12rem;
+}
+header .titleTxt{
+	font-size: 0.28rem;
+	color: #999999;
+	padding-top: 0.24rem;
+}
+.container-main {
+    margin-top: 1.98rem;
+    float: left;
+}
+.a-content,
+.container-main .good-message-wrap{
+  margin-top: 0.16rem;
+  display: block;
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  background: #ffffff;
+  border-bottom: 0.01rem solid #cccccc;
+  float: left;
+}
+.receive-mes,
+.container-main .good-message-wrap .good-message{
+  padding: 0.36rem 0;
+  width: 100%;
+}
+.receive-mes{
+	float: left;
+}
+.receive-mes .text {
+  color: #999999;
+  padding: 0.08rem 0 0 0.24rem;
+  font-size: 0.28rem;
+  float: left;
+}
+.change-wrap {
+    float: right;
+    padding-right: 0.24rem;
+    font-size: 0.3rem;
+    color: #ff9000;
+    padding-top: 0.06rem;
+}
+.receive-mes .text>i{
+	font-size: 0.32rem;
+}
+.change-wrap > i{
+	font-size: 0.24rem;
+	color: #CCCCCC;
+}
+.change-wrap .change{
+	color: #CCCCCC;
+}
+.receive-mes .text > span {
+  font-size: 0.32rem;
+  color: #333333;
+}
+.hidden {
+  display: none;
+}
+.mes{
+	 padding-left: 0.32rem;
+    font-size: 0.32rem;
+    color: #333333;
+}
+.receive-mes .particular-mes{
+    width: 5.15rem;
+    float: left;
+    padding-left: 0.32rem;
+    font-size: 0.32rem;
+    color: #333333;
+    line-height: 0.4rem;
+}
+.address,.name{
+	padding-left: 0.13rem;
+}
+/*good-message start */
+.container-main .good-message-wrap .good-message:first-child .line {
+  border-top: 0;
+}
+.container-main .good-message-wrap .good-message {
+  float: left;
+  padding-top: 0;
+}
+.good-message-wrap .good-message > div:nth-child(2n) {
+  width: 1.94rem;
+  box-sizing: border-box;
+  padding-left: 0.24rem;
+  padding-top: 0.34rem;
+  float: left;
+}
+.good-message-wrap .good-message > div > img {
+  width: 1.68rem;
+  height: 1.68rem;
+  border: 1px solid #cccccc;
+}
+.good-message-wrap .good-message .line {
+  border-top: 1px solid #cccccc;
+  margin-left: 0.36rem;
+}
+.priceC{
+	color: #FF9000;
+	padding-top: 0.54rem;
+}
+.good-message-wrap .good-message .good-message-content {
+  font-size: 0.32rem;
+  color: #333333;
+  padding: 0.34rem 0.34rem 0 0.24rem;
+  width: 5.56rem;
+  float: right;
+  box-sizing: border-box;
+  line-height: 0.4rem;
+}
+.good-message-wrap .good-message .good-message-content > span {
+  font-size: 0.42rem;
+  color: #999999;
+}
+.good-message-wrap .good-message .good-message-content > p:nth-child(3n) {
+  font-size: 0.48rem;
+  color: #ff9000;
+  padding-top: 0.48rem;
+  line-height: 0.48rem;
+}
+.good-message-wrap .good-message .good-message-content .count {
+  float: right;
+  display: block;
+  width: 40%;
+  text-align: right;
+  color: #333333;
+}
+/*good-message end */
+
+/*footer start */
+.container-main .footer {
+  width: 100%;
+  height: 1rem;
+  border-top: 1px solid #cccccc;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+}
+
+.container-main .footer .order {
+  display: block;
+  width: 100%;
+  height: 1rem;
+  text-align: center;
+  color: #ffffff;
+  font-weight: 600;
+  border: 0 ;
+  font-size: 0.36rem;
+  box-sizing: border-box;
+  outline: none;
+}
+/*footer end */

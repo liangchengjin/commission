@@ -1,0 +1,598 @@
+/*--头部 start--*/
+.navbar {
+  background: #fafafa;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 1;
+}
+.navbar .navbar-container-fluid {
+  height: 0.9166666666666667rem;
+  position: relative;
+}
+.navbar .navbar-container-fluid .navbar-main {
+  width: 100%;
+  height: 0.9166666666666667rem;
+  line-height: 0.9166666666666667rem;
+  text-align: center;
+  color: #333;
+  font-size: 0.37500000000000006rem;
+  margin: 0 auto;
+}
+.navbar .navbar-container-fluid .navbar-link {
+  width: 0.9166666666666667rem;
+  color: #ffffff;
+  font-size: 0.37500000000000006rem;
+  text-align: center;
+}
+.navbar .navbar-container-fluid .navbar-link {
+  position: absolute;
+  top: 0;
+}
+.navbar .navbar-container-fluid .navbar-link:first-child {
+  left: 0;
+}
+.navbar .navbar-container-fluid .navbar-link:last-child {
+  right: 0rem;
+  width: 1.0416666666666667rem;
+}
+.navbar .navbar-container-fluid .navbar-link .navbar-brand {
+  display: block;
+  height: 1.0416666666666667rem;
+  line-height: 0.9166666666666667rem;
+  text-align: center;
+  font-size: 0.37500000000000006rem;
+  color: #333;
+}
+/*搜索 start*/
+.navbar .navbar-container-fluid .navbar-main .navbar-seachGoodlsAddr {
+  float: left;
+  height: 0.625rem;
+  margin-top: 0.14583333333333334rem;
+  background: #FFF;
+  border-radius: 0.06944444444444445rem;
+  line-height: 0.625rem;
+  padding: 0 0.1388888888888889rem;
+  overflow: hidden;
+  margin-left: 0.24rem;
+  width: 80%;
+}
+.navbar .navbar-container-fluid .navbar-main .navbar-seachGoodlsAddr .navbar-seach {
+  height: 0.45833333333333337rem;
+  line-height: 0.45833333333333337rem;
+  font-size: 0.3333333333333333rem;
+  outline: none;
+  border: none;
+  float: left;
+  background: none;
+  color: #999;
+  font-family: "微软雅黑", "Droid Sans Fallback";
+  width: 4.513888888888889rem;
+  margin-top: 0.06944444444444445rem;
+}
+.navbar-seach::-webkit-input-placeholder {
+  color: #ccc;
+}
+.navbar .navbar-container-fluid .navbar-main .navbar-seachGoodlsAddr .navbar-btn {
+  display: inline-block;
+  width: 0.5208333333333334rem;
+  height: 0.47222222222222227rem;
+  float: left;
+  border: none;
+  outline: none;
+  color: #999;
+  font-size: 0.37500000000000006rem;
+  margin-top: 0.08333333333333333rem;
+  background: none;
+}
+.seach-deleIcon {
+  color: #ccc;
+  display: none;
+  margin-right: 0.16666666666666666rem;
+}
+.navbar-right {
+  display: block;
+}
+.seach-deleIcon {
+  float: right;
+  font-size: 0.3472222222222222rem;
+}
+.ui-searchbar-cancel {
+  height: 0.9166666666666667rem;
+  line-height: 0.9166666666666667rem;
+  background: #fafafa;
+  color: #FF9000;
+  border: none;
+  outline: none;
+  font-size: 0.2916666666666667rem;
+  font-family: "微软雅黑", "Droid Sans Fallback";
+  width: 1.0416666666666667rem;
+  display: block;
+  text-align: left;
+}
+/*搜索 end*/
+/*头部区域 搜索区 navbar-main start*/
+html {
+  overflow: hidden;
+}
+body {
+  -webkit-user-select: none;
+  overflow: auto;
+}
+.inform-link {
+  width: 100%;
+  height: 0.6944444444444444rem;
+  line-height: 0.625rem;
+  display: block;
+  position: relative;
+  color: #999999;
+}
+.inform-td-icon {
+  display: inline-block;
+  width: 0.4513888888888889rem;
+  height: 0.4513888888888889rem;
+  line-height: 0.4840277777777778rem;
+  text-align: center;
+  cursor: pointer;
+  border: 1px solid #cccccc !important;
+  border-radius: 100%;
+  overflow: hidden;
+  float: left;
+  margin-top: 0.10416666666666667rem;
+}
+/*头部区域 搜索区 navbar-main end*/
+/*--内容区 start--*/
+.container-main {
+  width: 100%;
+  height: 100%;
+  margin-top: 0.9166666666666667rem;
+  margin-bottom: 2.055555555555556rem;
+  background: #ebebeb;
+}
+.container-main .inform-tab {
+  background: #ebebeb;
+}
+.container-main .inform-tab .inform-list {
+  display: block;
+  background: #ffffff;
+  border-bottom: 1px solid #cccccc;
+  font-size: 0.32rem;
+}
+.container-main .inform-tab .inform-list::after {
+  display: block;
+  content: "clear";
+  height: 0;
+  clear: both;
+  overflow: hidden;
+  visibility: hidden;
+}
+.container-main .inform-tab .inform-list > li {
+  float: left;
+  height: 0.8333333333333334rem;
+  width: 33.333%;
+  text-align: center;
+  color: #999999;
+}
+.container-main .inform-tab .inform-list > li > span {
+  display: inline-block;
+  width: 100%;
+  height: 0.8125rem;
+  line-height: 0.8125rem;
+}
+.inform-tab > div {
+  display: block;
+  overflow-x: auto;
+  margin-top: 0.1736111111111111rem;
+  background: #FFf;
+}
+.informScrolls {
+  overflow-y: auto;
+  height: 10.5rem;
+}
+.addrScrolls {
+  height: 11.215277777777777rem;
+}
+.inform-show {
+  display: block !important;
+}
+.inform-tab > .inform-box:first-child {
+  margin-top: 0.1736111111111111rem !important;
+}
+.line {
+  display: block;
+  border-bottom: 2px solid #ff9000;
+  transition: left 0.3s ease-out;
+  position: relative;
+  width: 1.3888888888888888rem;
+  left: 0;
+  top: -0.05rem;
+  margin: 0 auto;
+}
+.inform-tab {
+  width: 100%;
+  text-align: left;
+  table-layout: fixed;
+  empty-cells: show;
+  border-collapse: collapse;
+  background: #FFf;
+}
+.inform-tab tbody {
+  background: #ffffff;
+}
+.inform-tab tr {
+  background: #ffffff;
+}
+.inform-tab tr td {
+  padding: 0.3333333333333333rem 0.25rem;
+}
+.inform-tab tr td:nth-child(1) {
+  width: 0.5rem;
+  text-align: left;
+  vertical-align: top;
+}
+.inform-add {
+  margin-bottom: 0rem !important;
+  font-size: 0.32rem;
+}
+.inform-add > span {
+  font-size: 0.32rem;
+  float: left;
+}
+.inform-add > span:first-child {
+  width: 2rem;
+  display: inline-block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.inform-add > span:last-child {
+  padding-left: 0.16666666666666666rem;
+}
+.inform-tab tr td:nth-child(2) {
+  padding-left: 0;
+  text-align: left;
+  border-bottom: 1px solid #dddddd;
+}
+.inform-tab tr:last-child td:nth-child(2) {
+  border-bottom: 0;
+}
+.inform-tab tr:last-child td:nth-child(3) {
+  border-bottom: 0;
+}
+.inform-tab tr:last-child > td {
+  border-bottom: none;
+}
+.inform-tab tr td > input[type="checkbox"] {
+  width: 0.5rem;
+  height: 0.5rem;
+}
+.inform-tab tr td > p {
+  font-size: 0.32rem;
+}
+.inform-tab tr td > p:first-child {
+  margin-bottom: 0.125rem;
+  line-height: 0.5555555555555556rem;
+}
+.inform-tab tr td > p:last-child {
+  color: #999999;
+  display: initial;
+}
+.inform-tab tr td > p > span:first-child {
+  margin-right: 0.3194444444444445rem;
+}
+.icon-iconchoicedefault {
+    color: #ff9000;
+    width: 0.44rem;
+    height: 0.44rem;
+    line-height: 0.44rem;
+    font-size: 0.44rem;
+}
+/*内容区选择框 start************************************************/
+.inform-tab tr td > input[type="checkbox"] {
+  -webkit-appearance: none !important;
+  appearance: none !important;
+  background-color: #fff;
+  border: 1px solid #cccccc;
+  border-radius: 100%;
+  padding: 0.06944444444444445rem;
+  display: inline-block;
+  vertical-align: middle;
+  position: relative;
+  cursor: pointer;
+  font-family: 'iconfont';
+  outline: none;
+}
+.inform-tab tr td > input[type="checkbox"]:checked,
+input[type="checkbox"] :indeterminate {
+  background-color: #f26722;
+  color: #fff;
+  outline: none;
+}
+.inform-tab tr td > input[type="checkbox"]:checked:after,
+.foot-agreement .inform-tab tr td > input[type="checkbox"]:indeterminate:after {
+  content: '\e678';
+  /*添加字体打钩的样式*/
+
+  font-size: 0.28rem;
+  position: absolute;
+  top: 0.06944444444444445rem;
+  left: 0.06944444444444445rem;
+  width: 0.125rem;
+  height: 0.125rem;
+  text-align: center;
+  color: #ffffff;
+}
+.inform-tab tr td > input[type="checkbox"]:indeterminate {
+  background-color: #eee;
+}
+.inform-tab tr td > input[type="checkbox"]:indeterminate:after {
+  text-shadow: 0.01388888888888889rem 0.01388888888888889rem 0 #f9f9f9;
+}
+/*内容区选择框 end*************************************************/
+.inform-tab tr td:nth-child(3) {
+  width: 1.7361111111111112rem;
+  padding-left: 0;
+  border-bottom: 1px solid #dddddd;
+}
+.inform-tab tr td:nth-child(3) .inform-update {
+  float: right;
+  color: #cccccc;
+  text-align: right;
+  font-size: 0.32rem;
+}
+.inform-tab tr td:nth-child(3) .inform-update .inform-icon {
+  display: inline-block;
+  line-height: 0.986111111111111rem;
+  text-align: left;
+  padding-left: 0.16666666666666666rem;
+  font-size: 0.3rem;
+}
+.inform-tab tr:last-child .inform-user-width {
+  border: none;
+}
+/*--内容区 end--*/
+/*--底部 start--*/
+.footer {
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+}
+.footer .footer-container-fluid .foot-agreement {
+  height: 1.0208333333333333rem;
+  background: #ffffff;
+  padding-right: 0.25rem;
+  border-top: 1px solid #cccccc;
+  color: #cccccc;
+  font-size: 0.32rem;
+}
+.footer .footer-container-fluid .foot-agreement .foot-label {
+  float: left;
+  display: inline-block;
+}
+.footer .footer-container-fluid .foot-agreement .foot-label > span > a {
+  margin-left: 0.25rem;
+  color: #999;
+  text-decoration: underline;
+}
+.footer .footer-container-fluid .foot-agreement .foot-label > span:nth-child(1) {
+  text-align: center;
+  float: left;
+  width: 1.0208333333333333rem;
+  height: 1.0208333333333333rem;
+  line-height: 1.0208333333333333rem;
+}
+.footer .footer-container-fluid .foot-agreement .foot-label > span > input[type="checkbox"] {
+  width: 0.5rem;
+  height: 0.5rem;
+}
+.footer .footer-container-fluid .foot-agreement .foot-label > span:nth-child(2) {
+  text-align: center;
+  float: left;
+  height: 1.0208333333333333rem;
+  line-height: 1.0208333333333333rem;
+}
+.footer .footer-container-fluid .foot-agreement > a {
+  text-align: center;
+  color: #999999;
+  float: right;
+  height: 1.0208333333333333rem;
+  line-height: 1.0208333333333333rem;
+  text-decoration: underline;
+}
+/*协议选择框 start************************************************/
+.foot-agreement .foot-label > span > input[type="checkbox"] {
+  -webkit-appearance: none !important;
+  appearance: none !important;
+  background-color: #fff;
+  border: 1px dashed #868484;
+  border-radius: 20%;
+  padding: 0.06944444444444445rem;
+  display: inline-block;
+  vertical-align: middle;
+  position: relative;
+  cursor: pointer;
+  font-family: 'iconfont';
+  outline: none;
+}
+.foot-agreement .foot-label > span > input[type="checkbox"]:checked,
+input[type="checkbox"] :indeterminate {
+  color: #fff;
+  outline: none;
+}
+.foot-agreement .foot-label > span > input[type="checkbox"]:checked:after,
+.foot-agreement .foot-label > span > input[type="checkbox"]:indeterminate:after {
+  content: '\e678';
+  /*添加字体打钩的样式*/
+
+  font-size: 0.28rem;
+  position: absolute;
+  top: 0.06944444444444445rem;
+  left: 0.06944444444444445rem;
+  width: 0.125rem;
+  height: 0.125rem;
+  text-align: center;
+  color: #ff9000;
+}
+.foot-agreement .foot-label > span > input[type="checkbox"]:indeterminate {
+  background-color: #eee;
+}
+.foot-agreement .foot-label > span > input[type="checkbox"]:indeterminate:after {
+  text-shadow: 0.01388888888888889rem 0.01388888888888889rem 0 #f9f9f9;
+}
+/*协议选择框 end*************************************************/
+.footer .footer-container-fluid .footer-btn {
+  width: 100%;
+  height: 1.0208333333333333rem;
+  font-size: 0.38rem;
+  color: #ffffff;
+  border: none;
+  outline: none;
+  font-family: "微软雅黑", "Droid Sans Fallback";
+  display: block;
+  line-height: 1.0208333333333333rem;
+  text-align: center;
+  background: #cccccc;
+}
+.footer-btn-gray {
+  background: #cccccc;
+  color: #ffffff;
+}
+.peorer {
+  background: #ff9000 !important;
+}
+.footer-btn-orang {
+  background: #ff9000;
+  color: #FFF;
+}
+/*--底部 end--*/
+/*显示最近历史记录信息 样式 start*/
+.inform-List-title {
+  padding: 0.3333333333333333rem 0.25rem 0 0.25rem;
+  color: #333;
+  font-size: 0.3rem;
+}
+.inform-List-del {
+  display: block;
+  padding: 0 0.25rem 0 0.25rem;
+  text-align: center;
+  color: #333;
+  height: 0.6944444444444444rem;
+  line-height: 0.6944444444444444rem;
+  font-size: 0.3rem;
+}
+.inform-List {
+  padding: 0.25rem 0.25rem 0 0.25rem;
+}
+.inform-List > li {
+  line-height: 0.625rem;
+  border-bottom: 1px solid #dddddd;
+}
+.inform-List > li > a {
+  display: block;
+  text-decoration: none;
+  color: #333;
+  font-size: 0.3rem;
+  padding: 0.08333333333333333rem 0;
+}
+/*显示最近历史记录信息 样式 end*/
+/*显示没有信息的样式*/
+.windowText {
+  height: 9.166666666666666rem;
+  line-height: 9.166666666666666rem;
+  text-align: center;
+  color: gray;
+  background: #ebebeb;
+}
+.hidden {
+  display: none;
+}
+.leave-img,
+.leave-imgt {
+  color: #999999;
+  float: left;
+  font-size: 0.32rem;
+}
+/*查看协议*/
+.layer-infor {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 999;
+}
+.layer-box {
+  position: relative;
+	top: 33%;
+	width: 85%;
+	margin: -0.2777777777777778rem auto;
+	border-radius: 0.06rem;
+	overflow: hidden;
+	background-color: #FAFAFC;
+}
+.line {
+  top: 0 !important;
+}
+.footerNavs {
+  height: 2.055555555555556rem !important;
+}
+.footer-nav {
+  height: 1.0208333333333333rem;
+}
+#btn {
+  background: #ff9000;
+  color: #ffffff;
+}
+.layer-header {
+    width: 100%;
+    text-align: center;
+    padding: 0.384rem 0 0.16rem;
+}
+.layer-header .layer-close {
+  font-size: 0.3rem;
+  color: #ccc;
+  display: inline-block;
+  width: 0.8333333333333334rem;
+  height: 0.8333333333333334rem;
+  line-height: 0.8333333333333334rem;
+  cursor: pointer;
+  text-align: center;
+  float: right;
+}
+.layer-tite {
+	font-size: 0.34rem;
+	text-align: center;
+}
+.layer-box .layer-content .layer-text {
+    text-align: justify;
+    font-size: 0.3rem;
+    color: #888;
+    word-wrap: break-word;
+    word-break: break-all;
+    padding: 0 0.4rem;
+}
+.layer-p {
+    text-indent: 0.3472222222222222rem;
+    word-break: break-all;
+    word-wrap: break-word;
+    font-size: 0.32rem;
+    line-height: 1.3;
+}
+.layer-button {
+    text-decoration: none;
+    font-size: 0.32rem;
+    height: 0.84rem;
+    line-height: 0.84rem;
+    background: #fafafa;
+    letter-spacing: 0.02rem;
+    color: #0bb20c;
+    box-sizing: border-box;
+    text-align: center;
+    width: 100%;
+    border-top: 1px solid #d5d5d6;
+    margin-top: 0.4rem;
+}
+.psssssss {
+  font-size: 34.72222222222222rem;
+}

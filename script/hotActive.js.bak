@@ -1,0 +1,193 @@
+var container;
+var hotActive = {
+	init:function(){	
+	this.time(1474437573,1474439683);
+	setInterval(function(){
+		hotActive.time(1474437573,1474439683);	
+		}, 1000);
+		this.btnEvent();
+		this.bindEvent();
+	},
+	time:function(starts,ends){
+				ends   = ends   * 1;
+				starts = starts * 1
+				var ts;
+				var endTime = ends ;
+				var startTime = starts;
+				var d=0;
+				var h=0;
+				var m=0;
+				var s=0;
+				var nowTime = new Date();
+				var nowSec = Math.floor((nowTime.getTime())/1000);
+			console.log(nowSec)
+				if(startTime >= nowSec){
+					$('.status').html('开始')
+					t = startTime - nowSec;
+					$('.grabNow').html('未开始')
+					$('.grabNow').addClass('grayBg');
+					$('.residue').removeClass('none');
+					$('.residues').addClass('none');
+					d=Math.floor(t/60/60/24);
+					h=Math.floor(t/60/60%24);
+					m=Math.floor(t/60%60);
+					s=Math.floor(t%60);
+				}else{
+					$('.status').html('结束')
+					t = endTime - nowSec;
+					$('.grabNow').html('马上抢')
+					$('.residues').removeClass('none');
+					$('.residue').addClass('none');
+					$('.grabNow').removeClass('grayBg');
+					hotActive.statusFn();
+					if(t>0){
+						d=Math.floor(t/60/60/24);
+						h=Math.floor(t/60/60%24);
+						m=Math.floor(t/60%60);
+						s=Math.floor(t%60);
+					}else{
+						$('.grabNow').html('已结束');
+						$('.grabOver').removeClass('none');
+						$('.residues').addClass('none');
+						$('.residue').addClass('none');
+						$('.grabNow').addClass('grayBg');
+					}
+				}				
+					(d < 10)? (d = '0' + d) : (d = d);
+					(h < 10)? (h = '0' + h) : (h = h);	
+					(m < 10)? (m = '0' + m) : (m = m);	
+					(s < 10)? (s = '0' + s) : (s = s);
+				$('.day').html(d)
+				$('.hour').html(h)	
+				$('.minute').html(m)	
+				$('.sec').html(s)					
+		},
+	btnEvent:function(){
+		$('.back').on('tap',function(){
+			$('.alert-wrap').addClass('none')
+			document.body.style.overflow='auto'
+			
+		})
+		$('.grabNow').on('tap',function(){
+			hotActive.butColor('.grabNow','touchstart','#cc7300','#cccccc');
+			hotActive.butColor('.grabNow','touchend','#ff9000','#ffffff');
+			hotActive.butColor('.grayBg','touchstart','#a3a3a3','#cccccc');
+			hotActive.butColor('.grayBg','touchend','#cccccc','#ffffff');
+			hotActive.butColor('.btn-foot','touchstart','rgb(238,238,238)','#0bb20c');
+			hotActive.butColor('.btn-foot','touchend','#ffffff','#0bb20c');
+			if($(this).html() !== '马上抢'){
+				$('.hint').removeClass('none')
+				setTimeout("hotActive.codefans()",2000)
+				switch ($(this).html()) {
+				case '已中止':
+					$('.hint').html('活动已中止')
+				break;
+				case '已结束':
+					$('.hint').html('活动已结束')
+				break;
+				case '未开始':
+					$('.hint').html('活动未开始')
+				break;
+				case '已参与':
+					$('.hint').html('该商品您已购买过')
+				break;
+				case '抢光了':
+					$('.hint').html('该商品已经抢光')
+				break;
+				}
+			} else {
+				if($(this).prev().find('.amounts').html() > 1){
+					$('#number')[0].value = $(this).prev().find('.amounts').html();
+					$('.alert-wrap').removeClass('none')
+					document.body.style.overflow='hidden'
+				}
+				container = $(this).prev().find('.amounts').html();
+			}
+		})
+		
+	},		
+	//按钮颜色	
+	butColor:function(selector,event,bg,color){
+	    $(selector).on(event,function(){
+	        $(this).css({
+	            'background':bg,
+	            'color':color
+	        })
+	    });
+	},
+	codefans:function(){
+		$('.hint').addClass('none');
+	},
+	 bindEvent:function () {
+        this.reduceNumber();
+        this.addNumber();
+        this.enterNumber();
+	 }, 
+	 enterNumber:function () {
+        $('#number').on('keyup',function () {
+            var number = $('#number').val();
+            if (number) {
+                if (number > 1 && number < container) {
+                    $('#reduce').removeClass('number-active');
+                	$('#add').removeClass('number-active');
+                }else if (number < 1){
+                    $('#reduce').addClass('number-active');
+                    $('#number').val(1);
+                } else if (number >= container){
+                    $('#add').addClass('number-active');
+                	$('#number').val(container);
+                } else {
+                	$('#add').removeClass('number-active');
+                	$('#reduce').removeClass('number-active');
+                }
+            }
+        });
+    },
+	reduceNumber:function () {
+        $('#reduce').on("tap",function () {
+            var number = $('#number').val();    
+            number--;
+            $('#number').val(number);
+            if (number > 1) {
+                $('#reduce').removeClass('number-active');
+                $('#add').removeClass('number-active');
+            }else{
+                $('#reduce').addClass('number-active');        
+                $('#number').val(1);
+            }
+
+        });
+    },
+    addNumber:function () {
+        $('#add').on("tap",function () {
+            var number = $('#number').val();
+            number++;
+            $('#number').val(number);
+            if (number >= container) {
+                $('#add').addClass('number-active');
+                $('#number').val(container);
+            }else{
+                $('#add').removeClass('number-active');
+                $('#reduce').removeClass('number-active');
+                
+            }
+
+        });
+    },
+    statusFn:function(){
+    	var len = $('.grabNow').length;
+    	for(var i = 0; i < len; i++){
+    		if($('.grabNow')[i].attributes.stus.value === 'over'){
+    			$('.grabNow')[i].innerHTML = "抢光了";
+    			$($('.grabNow')[i]).addClass('grayBg');
+    			$($('.residue')[i]).addClass('none');
+    			$($('.residues')[i]).addClass('none');
+    			$($('.grabOver')[i]).removeClass('none')
+    		}
+    	}
+    }
+}
+$(function () {
+    hotActive.init()
+});
+
