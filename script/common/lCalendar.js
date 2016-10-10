@@ -1,18 +1,3 @@
-/**
- * Created by Administrator on 2016/10/8.
- */
-
-/*
- * lCalendar日期控件
- *
- * 作者：黄磊
- *
- * 邮箱：xfhxbb@yeah.net
- *
- * Copyright 2016
- *
- * 创建于：2016-01-08
- */
 window.lCalendar = (function() {
     var MobileCalendar = function() {
         this.gearDate;
@@ -52,24 +37,26 @@ window.lCalendar = (function() {
                     '<div class="date_roll">' +
                     '<div>' +
                     '<div class="gear date_yy" data-datetype="date_yy"></div>' +
-                    '<div class="date_grid">' +
+                    '<div class="date_grid bottom-top line-border">' +
                     '</div>' +
                     '</div>' +
                     '<div>' +
                     '<div class="gear date_mm" data-datetype="date_mm"></div>' +
-                    '<div class="date_grid">' +
+                    '<div class="date_grid bottom-top line-border">' +
                     '</div>' +
                     '</div>' +
                     '<div>' +
                     '</div>' +
                     '</div>' +
                     '</div>' +
-                    '<div class="date_btn_box">' +
+                    '<div class="bottom-d line-border"></div>'+
+                    '<div class="date_btn_box">' +               
                     '<div class="date_btn lcalendar_cancel">取消</div>' +
-                    '<div class="date_btn lcalendar_finish">确定</div>' +
+                    '<div class="date_btn lcalendar_finish line-border boder-left">确定</div>' +
                     '</div>' +
                     '</div>';
                 document.body.appendChild(_self.gearDate);
+                document.body.style.overflow = 'hidden';
                 dateCtrlInit();
                 var lcalendar_cancel = _self.gearDate.querySelector(".lcalendar_cancel");
                 lcalendar_cancel.addEventListener('touchstart', closeMobileCalendar);
@@ -118,31 +105,31 @@ window.lCalendar = (function() {
                     '<div class="datetime_roll">' +
                     '<div>' +
                     '<div class="gear date_yy" data-datetype="date_yy"></div>' +
-                    '<div class="date_grid">' +
+                    '<div class="bottom-top line-border date_grid">' +
                     '<div>年</div>' +
                     '</div>' +
                     '</div>' +
                     '<div>' +
                     '<div class="gear date_mm" data-datetype="date_mm"></div>' +
-                    '<div class="date_grid">' +
+                    '<div class="date_grid bottom-top line-border">' +
                     '<div>月</div>' +
                     '</div>' +
                     '</div>' +
                     '<div>' +
                     '<div class="gear date_dd" data-datetype="date_dd"></div>' +
-                    '<div class="date_grid">' +
+                    '<div class="date_grid bottom-top line-border">' +
                     '<div>日</div>' +
                     '</div>' +
                     '</div>' +
                     '<div>' +
                     '<div class="gear time_hh" data-datetype="time_hh"></div>' +
-                    '<div class="date_grid">' +
+                    '<div class="date_grid bottom-top line-border">' +
                     '<div>时</div>' +
                     '</div>' +
                     '</div>' +
                     '<div>' +
                     '<div class="gear time_mm" data-datetype="time_mm"></div>' +
-                    '<div class="date_grid">' +
+                    '<div class="date_grid bottom-top line-border">' +
                     '<div>分</div>' +
                     '</div>' +
                     '</div>' +
@@ -217,19 +204,19 @@ window.lCalendar = (function() {
                     '<div class="time_roll">' +
                     '<div>' +
                     '<div class="gear time_hh" data-datetype="time_hh"></div>' +
-                    '<div class="date_grid">' +
+                    '<div class="date_grid bottom-top line-border">' +
                     '<div>时</div>' +
                     '</div>' +
                     '</div>' +
                     '<div>' +
                     '<div class="gear time_mm" data-datetype="time_mm"></div>' +
-                    '<div class="date_grid">' +
+                    '<div class="date_grid bottom-top line-border">' +
                     '<div>分</div>' +
                     '</div>' +
                     '</div>' +
                     '<div>' +
                     '<div class="gear time_ss" data-datetype="time_ss"></div>' +
-                    '<div class="date_grid">' +
+                    '<div class="date_grid bottom-top line-border">' +
                     '<div>秒</div>' +
                     '</div>' +
                     '</div>' +
@@ -634,6 +621,7 @@ window.lCalendar = (function() {
                 var evt = new CustomEvent('input');
                 _self.trigger.dispatchEvent(evt);
                 document.body.removeChild(_self.gearDate);
+                document.body.style.overflow = 'auto';
             }
             //日期确认
             function finishMobileDate(e) {

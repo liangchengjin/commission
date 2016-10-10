@@ -106,8 +106,6 @@ html,body{
     margin: 0;
     box-sizing: border-box;
     z-index: 0;
-    border-top: 1px solid #ddd;
-    border-bottom: 1px solid #ddd;
 }
 
 .date_grid>div {
@@ -157,7 +155,7 @@ html,body{
     width: 50%;
 }
 .date_btn:last-of-type{
-    border-left: 1px solid #ccc;
+
     color: #00a53c;
 }
 
@@ -166,7 +164,6 @@ html,body{
     -webkit-box-pack: justify;
     -webkit-box-align: stretch;
     height: 0.96rem;
-    border-top: 1px solid #ccc;;
 }
 
 .gear {
