@@ -196,11 +196,11 @@ button{
   top: -0.06rem;
   margin:0 auto;
 }
-.main .footer {
+.footer {
   position: fixed;
   width: 100%;
 }
-.main .footer .amount {
+.footer .amount {
   display: flex;
   background: #fafafa;
   height: 1.81rem;
@@ -208,15 +208,15 @@ button{
   padding: 0 0.36rem;
   border-top: 1px solid #cccccc;
 }
-.main .footer .amount table {
+.footer .amount table {
   width: 100%;
   font-size: 0.54rem;
 }
-.main .footer .amount .amount-main {
+.footer .amount .amount-main {
   display: flex;
   float: right;
 }
-.main .footer .amount .amount-main a {
+.footer .amount .amount-main a {
   width: 0.9rem;
   height: 0.9rem;
   font-size: 0.8rem;
@@ -229,14 +229,14 @@ button{
   line-height: 100%;
   text-align: center;
 }
-.main .footer .amount .amount-main a i {
+.footer .amount .amount-main a i {
   font-size: 0.3rem;
   vertical-align: middle;
 }
-.main .footer .amount .amount-main a.number-active {
+.footer .amount .amount-main a.number-active {
   background: #F5F5F5;
 }
-.main .footer .amount .amount-main input {
+.footer .amount .amount-main input {
   border: 0;
   width: 1.35rem;
   height: 0.9rem;
@@ -247,7 +247,7 @@ button{
   color: #333;
   float: left;
 }
-.main .footer .bug {
+.footer .bug {
   clear: both;
   background: #ff9000;
   color: #fff;
@@ -255,7 +255,7 @@ button{
   height: 1.47rem;
   line-height: 1.47rem;
 }
-.main .footer .footer-container-fluid .footer-btn {
+.footer .footer-container-fluid .footer-btn {
   width: 100%;
   height: 1.47rem;
   font-size: 0.54rem;
