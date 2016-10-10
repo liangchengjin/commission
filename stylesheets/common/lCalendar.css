@@ -1,5 +1,6 @@
 html,body{
     font-family: "微软雅黑", "Droid Sans Fallback";
+    height: 100%;
 }
 .gearDate,
 .gearDatetime,

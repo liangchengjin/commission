@@ -1,8 +1,10 @@
 html{
 	font-family: '微软雅黑';
+	height: 100%;
 }
 body{
 	background: #eeeeee;
+	height: 100%;
 }
 header{
     height: 0.91rem;
