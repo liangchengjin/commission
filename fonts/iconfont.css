@@ -1,10 +1,10 @@
 
 @font-face {font-family: "iconfont";
-  src: url('iconfont.eot?t=1474623676'); /* IE9*/
-  src: url('iconfont.eot?t=1474623676#iefix') format('embedded-opentype'), /* IE6-IE8 */
-  url('iconfont.woff?t=1474623676') format('woff'), /* chrome, firefox */
-  url('iconfont.ttf?t=1474623676') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/
-  url('iconfont.svg?t=1474623676#iconfont') format('svg'); /* iOS 4.1- */
+  src: url('iconfont.eot?t=1471827506'); /* IE9*/
+  src: url('iconfont.eot?t=1471827506#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('iconfont.woff?t=1471827506') format('woff'), /* chrome, firefox */
+  url('iconfont.ttf?t=1471827506') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/
+  url('iconfont.svg?t=1471827506#iconfont') format('svg'); /* iOS 4.1- */
 }
 
 .iconfont {
@@ -140,4 +140,3 @@
 .icon-iconsetup:before { content: "\e667"; }
 .icon-iconfontminus:before { content: "\e67a"; }
 .icon-icondot:before { content: "\e67c"; }
-.icon-prompt:before { content: "\e67d"; }
