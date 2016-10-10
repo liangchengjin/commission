@@ -36,7 +36,6 @@ button{
 /*}*/
 .product {
   overflow-y: scroll;
-  -webkit-overflow-scrolling: touch;
   padding-bottom: 4.6rem;
 }
 
