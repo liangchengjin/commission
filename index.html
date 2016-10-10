@@ -2,156 +2,162 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>支付成功</title>
-    <meta name="keywords" content="">
-    <meta name="format-detection" content="telephone=no">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black">
-    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-
-    <link rel="stylesheet" href="./stylesheets/common/reset.css">
-    <link href="./stylesheets/common/iconfont.css" rel="stylesheet" media="screen, projection">
-    <link rel="stylesheet" href="./stylesheets/wxWaitPay.css">
-    <script src="script/common/adaptive.js"></script>
-    <script type="text/javascript">
-        window['adaptive'].desinWidth = 750;
+    <title>商品详情</title>
+    <link href="stylesheets/common/reset.css" rel="stylesheet">
+    <link href="stylesheets/common/navigation.css" rel="stylesheet">
+    <link href="fonts/iconfont.css" rel="stylesheet">
+    <link href="stylesheets/common/swiper.min.css" rel="stylesheet">
+    <link href="stylesheets/product-detail.css" rel="stylesheet">
+    <script src="script/common/adaptive.js" type="text/javascript"></script>
+    <script>
+        window['adaptive'].desinWidth = 1080;
         window['adaptive'].baseFont = 18;
         window['adaptive'].maxWidth = 480;
         window['adaptive'].init();
     </script>
 </head>
 <body>
-<section class="container-main">
-    <div class="status-area">
-        <div class="text">
-           <i class="iconfont icon-iconchoice"></i>
-            <div>
-                <p>交易成功</p>
-                <p><span class="time">需补填收货信息</span></p>
-            </div>
+<!--头部 start-->
+<nav class="navbar">
+    <div class="navbar-container-fluid">
+        <div class="navbar-link">
+            <a class="navbar-brand iconfont icon-iconreturndefault" href="#"></a>
+        </div>
+        <div class="navbar-main">
+            <h1 id="navbar-title">解决方案详情</h1>
         </div>
     </div>
-</section>
-<section class="container-main-b">
-<div class="content-wrap">
-    <div class="content">
-        <div class="message">
-            <i class="iconfont icon-iconwodedefault"></i>
-            <span class="person">收货人</span>  
-            <span class="chose">选择
-            	<i class="iconfont icon-iconmoredefault"></i>
-            </span>
-        </div>
-        <div class="line"></div>
-    </div>
-    <div class="content">
-        <div class="message">
-            <i class="iconfont icon-icon28"></i>
-            <span class="person">自提点</span>
-             <span class="chose">选择
-             	<i class="iconfont icon-iconmoredefault"></i>
-             </span>
-        </div>
-    </div>
-</div>
-<div class="good-message-wrap">
-    <div id="goodMes-content">
-        <div class="good-message">
-            <div class="lines"></div>
-            <div class="imgDiv"><img src="images/goods.png"></div>
-            <div class="good-message-content">
-                <div class="left">
-                    <p class="goodsName">小麦麦麦麦一碰三防套餐产品组合 (春耕解决方案 ) </p>
-                    <span>瑞功g x1 + 好鲜收含海藻酸水溶肥功g x1+好鲜收含海藻酸水料10ml x1</span>
-                </div>
-                <div class="right">
-                    <dl>¥32.50</dl>
-                    <dt>x1</dt>
+</nav>
+<div class="container">
+	<form action="http://127.0.0.1:8020/%E7%A1%AE%E8%AE%A4%E8%AE%A2%E5%8D%95/json/data.json" id="demo" onsubmit="return saveReport();">
+    <div class="main">
+        <!--<div class="delect"><i class="iconfont icon-iconclose01default"></i></div>-->
+        <div class="product">
+            <div class="p-contain" >
+                <div class="swiper-container">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <img src="images/pro0.png">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="images/pro1.png">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="images/pro2.png">
+                        </div>
+                    </div>
+                    <div class="swiper-pagination"></div>
                 </div>
             </div>
-        </div>
-        <div class="good-message">
-            <div class="lines"></div>
-            <div class="imgDiv"><img src="images/goods.png"></div>
-            <div class="good-message-content">
-                <div class="left">
-                    <p class="goodsName">小麦麦麦麦一碰三防套餐产品组合 (春耕解决方案 ) </p>
-                    <span>瑞功g x1 + 好鲜收含海藻酸水溶肥功g x1+好鲜收含海藻酸水料10ml x1</span>
-                </div>
-                <div class="right">
-                    <dl>¥32.50</dl>
-                    <dt>x1</dt>
-                </div>
-            </div>
-        </div>
-        <div class="good-message">
-            <div class="lines"></div>
-            <div class="imgDiv"><img src="images/goods.png"></div>
-            <div class="good-message-content">
-                <div class="left">
-                    <p class="goodsName">小麦麦麦麦一碰三防套餐产品组合 (春耕解决方案 ) </p>
-                    <span>瑞功g x1 + 好鲜收含海藻酸水溶肥功g x1+好鲜收含海藻酸水料10ml x1</span>
-                </div>
-                <div class="right">
-                    <dl>¥32.50</dl>
-                    <dt>x1</dt>
-                </div>
-            </div>
-        </div>
-        <div class="good-message">
-            <div class="lines"></div>
-            <div class="imgDiv"><img src="images/goods.png"></div>
-            <div class="good-message-content">
-                <div class="left">
-                    <p class="goodsName">小麦麦麦麦一碰三防套餐产品组合 (春耕解决方案 ) </p>
-                    <span>瑞功g x1 + 好鲜收含海藻酸水溶肥功g x1+好鲜收含海藻酸水料10ml x1</span>
-                </div>
-                <div class="right">
-                    <dl>¥32.50</dl>
-                    <dt>x1</dt>
-                </div>
-            </div>
-        </div>
-        <!--<div class="good-message">-->
-            <!--<div class="lines"></div>-->
-            <!--<div class="imgDiv"><img src="images/goods.png"></div>-->
-            <!--<div class="good-message-content">-->
-                <!--<div class="left">-->
-                    <!--<p class="goodsName">小麦麦麦麦一碰三防套餐产品组合 (春耕解决方案 ) </p>-->
-                    <!--<span>瑞功g x1 + 好鲜收含海藻酸水溶肥功g x1+好鲜收含海藻酸水料10ml x1</span>-->
-                <!--</div>-->
-                <!--<div class="right">-->
-                    <!--<dl>¥32.50</dl>-->
-                    <!--<dt>x1</dt>-->
-                <!--</div>-->
+
+            <!--<div class="p-img">-->
+                <!--&lt;!&ndash;<img src="images/products.png">&ndash;&gt;-->
             <!--</div>-->
-        <!--</div>-->
+           <div>
+               <div class="p-header">
+                   <div class="p-package">
+                       <span class="package-name">小麦一喷三防套餐（春耕解决方案详情）（春耕解决方案详情）</span>
+                       <span class="package-title">进口货,国产价</span>
+                   <div>
+                           <span class="package-special">￥32.50</span>
+                           <span class="package-original">原价￥39.00</span>
+                       </div>
+                   </div>
+               </div>
+           </div>
+
+            <div class="p-main">
+                <span class="package">套餐包含如下商品:</span>
+                <ul>
+                    <li>
+                        <div class="single-title">
+
+                            <span class="single-name">  <i class="iconfont icon-icondot"></i>瑞功R1（5%高效氯氟氰菊酯微乳剂）</span>
+                        </div>
+                        <div class="single-info">
+                            <span class="single-brand">品牌：瑞德丰</span>
+                            <span class="single-rule">规格：300克/瓶</span>
+                            <span class="single-number">X 4瓶</span>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="single-title">
+                            <span class="single-name">  <i class="iconfont icon-icondot"></i>瑞功R1（5%高效氯氟氰菊酯微乳剂）</span>
+                        </div>
+                        <div class="single-info">
+                            <span class="single-brand">品牌: 瑞德丰</span>
+                            <span class="single-rule">规格: 300克/瓶</span>
+                            <span class="single-number">X 4瓶</span>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="single-title">
+                            <span class="single-name"><i class="iconfont icon-icondot"></i>瑞功R1（5%高效氯氟氰菊酯微乳剂）</span>
+                        </div>
+                        <div class="single-info">
+                            <span class="single-brand">品牌: 瑞德丰</span>
+                            <span class="single-rule">规格: 300克/瓶</span>
+                            <span class="single-number">X 4瓶</span>
+                        </div>
+                    </li>
+
+
+
+                </ul>
+            </div>
+            <div class="p-detail">
+                <ul id="myTab" class="tab inform-list">
+                    <li>
+                        <a href="javascript:void (0);" data-toggle="tab">商品详情</a>
+                        <i class="line"></i>
+                    </li>
+                    <li><a href="javascript:void (0);" data-toggle="tab">商品参数</a></li>
+                </ul>
+                <div id="myTabContent" class="tab-content">
+                    <div class="tab-pane" id="product-info">
+                        <div class="empty">
+                            <p class="tip">商品描述暂未添加</p>
+                        </div>
+                    </div>
+                    <div class="tab-pane tab-active" id="product-param">
+                        <div class="empty">
+                            <p class="tip">商品描述暂未添加</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <footer class="footer">
+            <div class="footer-container-fluid">
+                <div class="amount">
+                    <table>
+                        <tr>
+                            <td>购买数量</td>
+                            <td>
+                                <div class="amount-main">
+                                    <a id="reduce" class="number-active"><i class="iconfont icon-iconfontminus"></i></a>
+                                    <input type="text" value="1" id="number">
+                                    <a id="add"><i class="iconfont icon-iconfollow01default"></i></a>
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+
+                </div>
+                <div class="footer-nav">
+                    <a href="#"><button type="button" class="footer-btn btnJump" id="bug">点击购买</button></a>
+                </div>
+
+            </div>
+        </footer>
     </div>
+    </form>
 </div>
-<div class="countSum-wrap">
-    <div class="countSum">
-        共<span>1</span>件商品
-        <span class="sum">合计 :</span>
-        <span class="price">¥32.50</span>
-    </div>
-</div>
-<div class="order-mes-wrap">
-    <div class="order-mes">
-		<span>订单号: <span>ZG2016081201202010</span></span>
-		<span>下单时间: <span>2016-08-16</span></span>
-		<span>付款时间：<span>2016-09-16</span></span>
-    </div>
-</div>
-</section>
-<div class="footer">
-    <div class="countSum">
-        <span class="sum">合计：</span>
-        <span class="price">¥32.50</span>
-        <button class="order">确认</button>
-    </div>
-</div>
-    <script src="script/common/zepto.min.js"></script>
-    <script type="text/javascript" src="script/common/utls.js"></script>
-    <script src="script/wxWaitPay.js"></script>
 </body>
+<script src="script/common/zepto.min.js" type="text/javascript"></script>
+<script type="text/javascript" src="script/common/utls.js"></script>
+<script src="script/common/swiper.min.js" type="text/javascript"></script>
+<script src="script/product-detail.js" type="text/javascript"></script>
 </html>

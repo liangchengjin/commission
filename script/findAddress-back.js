@@ -1,32 +1,42 @@
+window['adaptive'].desinWidth = 1080;
+window['adaptive'].baseFont = 18;
+window['adaptive'].maxWidth = 480;
+window['adaptive'].init();
+
+
+
+
 
 
 /****************************************
  *          收货地址 单选切换           *
- ****************************************/ 
+ ****************************************/
+    // 存放属性
+
+
+
     //$(".inform-tab tr .inform-click").click(function(){
-    $(".inform-tab").on("tap",".inform-tab tr",function(){
-        $(".footer-btn").removeClass('footer-disbaled');
-        var pars = $(this).find(".inform-title").attr('data-title');
-        $("#inform-tab").attr("ram", pars); 
-		btBg()
+    $(".inform-tab").on("tap",".inform-click",function(){
+
         if($(this).parents("tr").find(".iconchoicedefault").hasClass("icon-iconchoicedefault")){
-            //var pars = $(this).children('p').attr('data-title');
-            //$("#inform-tab").attr("ram", pars);
+            var pars = $(this).children('p').attr('data-title');
+            $("#inform-tab").attr("ram", pars);
             return ;
         }
         $(this).parents("tr").find(".iconchoicedefault").addClass("iconfont icon-iconchoicedefault").parents("tr")
         .siblings("tr").find(".iconchoicedefault").removeClass("iconfont icon-iconchoicedefault");
 
         $(this).parents("tr").find(".inform-selector").css("border","0px").parents("tr").siblings("tr").
-        find(".inform-selector").css("border","0.2rem solid #cccccc;");
+        find(".inform-selector").css("border","0.05rem solid #cccccc;");
 
         $(this).parents("tr").find(".inform-td-icon").css("border","0px").parents("tr").siblings("tr").
-        find(".inform-td-icon").css("border","0.2rem solid #cccccc;");
+        find(".inform-td-icon").css("border","0.05rem solid #cccccc;");
 
+        //$('#inform-tab').
         $(".footer .footer-activeaddress-btn").css("background","rgb(255, 144, 0)");
     });
 
-btBg()
+
 // 全局变量
 var shop_id;
 
@@ -43,31 +53,26 @@ function GetQueryString(name)
      if(r!=null)return  unescape(r[2]); return null;
 }
 
-var line = $('.line');
-$('.inform-list li').on('tap',function(){
-	if($(this).index() == 0 ){
-		line.css('left','0');
-	} else if($(this).index() == 1){
-		line.css('left','100%');
-	} else {
-		line.css('left','200%');
-	}
-})
+
+/*console.log("当前的shop_id是-------"+shop_id);
+*/
 /************************************
  *          搜索框
  **********************************/
 $('.navbar-seach').focus(function(){
     $(this).addClass("showing");
-    if($(this).val()){       
-        $('.seach-deleIcon').show().css({'color':'#ccc'});       
+    if($(this).val()){
+        /*console.log("Fdsffsd");*/
+        $('.seach-deleIcon').show().css({'color':'#ccc'});
+        $(".navbar-seachGoodlsAddr").css({width:"73%"});
         $('.ui-searchbar-cancel').html('搜索');
         $(".inform-List-box").show();
-        //$("#inform-tab").hide();
-        $(".informScrolls").hide();
+        $("#inform-tab").hide();
     }else{
+        /*console.log("nonon");*/
+        // $(".navbar-seachGoodlsAddr").css({width:"80%"});
         // 显示选择地址
-        $(".informScrolls").hide();
-        //$("#inform-tab").hide();
+        $("#inform-tab").hide();
         $(".seach-deleIcon").hide();
         $(".inform-list").hide();
         $(".inform-List-box").show();
@@ -75,23 +80,21 @@ $('.navbar-seach').focus(function(){
     }
 
 });
-var dataSeach = "";
+
+var dataSeach ="";
 $('.navbar-seach').keyup(function(){
-	$(".inform-List-box").show();
-	$(".informScrolls").hide();
-	$('.inform-list').hide()
     if(!$(this).val()){
         return;
     }
-
-    dataSeach = $(this).val();
     $('.seach-deleIcon').show();
+    $(".navbar-seachGoodlsAddr").css({width:"73%"});
     $('.seach-deleIcon').css({'color':'#ccc'});
     $('.ui-searchbar-cancel').html('搜索');
 
     if($('.navbar-seach').val() === "" || $('.navbar-seach').val() === null){
         alert("请输入搜索的内容");
         dataSeach = $('.navbar-seach').val();
+        //console.log(dataSeach);
         $(".navbar-main").attr("data-seach",dataSeach);
     }
 
@@ -102,8 +105,7 @@ $(document).bind("tap",function(e){
     var target  = $(e.target);
     if(target.closest(".showing,navbar-link,.inform-show").length == 0){
         $(".inform-List-box").hide();
-        //$("#inform-tab").show();
-        $(".informScrolls").show();
+        $("#inform-tab").show();
         $('.seach-deleIcon').hide();
         $('.navbar-seach').removeClass("showing");
         $(".inform-list").show();
@@ -118,22 +120,25 @@ $(".ui-searchbar-cancel").tap(function(){
         //读取 搜索记录
         return;
     }
-    // 设置的方法   
+    // 设置的方法
+    // setCookie("history",$(".navbar-seach").val(),30);
+   /* console.log("提交搜索的内容"+$(".navbar-seach").val());
+    console.log("调用keyword方法");*/
     var data4 = getZitiinfo(4,$(".navbar-seach").val())
     getZitiinfoEach(data4);
-    //$(".navbar-seach").val("");     
+    //$(".navbar-seach").val("");
     $(".navbar-seach").val(dataSeach);
 });
 
 
 $('.seach-deleIcon').on("touchstart", function(){
-    $('.seach-deleIcon').css({'color':'#ff9000'});
+    $('.seach-deleIcon').css({'color':'green'});
 });
 
 $('.seach-deleIcon').on("touchend", function(){
     $('.navbar-seach').val('');
-    $(".informScrolls").show();
-    //$("#inform-tab").show();
+    //$(".inform-List-box").hide();
+    $("#inform-tab").show();
     $(".inform-List-box").show();
     $(this).hide();
 });
@@ -160,20 +165,23 @@ $("#inform-list-type li").tap(function(){
     {
         case 0:
             var data1 = getZitiinfo(1);
-            
+            // alert("aa");
+            // console.log("调用ship_id方法");
             $(".navbar-seach").val(dataSeach);
             getZitiinfoEach(data1);
             break;
 
         case 1:
-            var data2 = getZitiinfo(2);           
+            var data2 = getZitiinfo(2);
+            // console.log("调用type方法");
             $(".navbar-seach").val(dataSeach);
             getZitiinfoEach(data2);
             break;
 
         case 2:
             var data3 = getZitiinfo(3);
-            $(".navbar-seach").val(dataSeach);           
+            $(".navbar-seach").val(dataSeach);
+            // console.log("调用store_id方法");
             getZitiinfoEach(data3);
             break;
     }
@@ -205,7 +213,7 @@ function getZitiinfoEach(obj){
 }
 
 // 底部选择框取消后，按钮变成灰色
-$(".foot-checkbox").on("click", function(){
+$(".foot-checkbox").on("tap", function(){
     $(".footer-btn").css({"background": "#cccccc"});
 
 });
@@ -225,22 +233,12 @@ check.onclick = function(){
         footerBtn.style.background = "#ff9000";
         show.butColor(".footer-btn-orang","touchstart","rgb(211,112,0)","rgb(218,208,178)");
         show.butColor(".footer-btn-orang","touchend","#ff9000","#FFF");
-        $(".footer-btn").removeClass('footer-disbaled');
     }else if(check.checked == true){
         check.removeAttribute("checked");
-    } else {
-        $(".footer-btn").removeClass('footer-disbaled');
     }
 };
-$('.foot-label').on('tap',function(){
-	if($('.footer-btn').css('background') === 'rgb(204, 204, 204)'){
-		show.butColor('.footer-btn','touchstart','#a3a3a3','#cccccc');
-		show.butColor('.footer-btn','touchend','#cccccc','#ffffff');
-	} else{
-		show.butColor('.footer-btn','touchstart','#cc7300','#cccccc');
-		show.butColor('.footer-btn','touchend','#ff9000','#ffffff');
-	}
-})
+
+
 /*****************************************************************
  *
  *   搜索内容 Ajax get
@@ -298,20 +296,25 @@ var shopId;
 
 
 $(".footer-btn").on("tap", function(){
+    /*if(returnUrl.indexOf("&shop_id=") > 0 ){
+        var shopVal = windowHref.split("&shop_id=")[1];
+        if(shopVal){
+            shopId = shopVal;
+        }
+    }*/
+
      if(shopReg.test(returnUrl)){
           shopId = returnUrl;
      }
 
-    if ($('.footer-btn').hasClass('footer-disbaled')){
-       return false;
+    if(myReg.test(returnUrl)){
+        //console.log("yes--有--去掉?");
+        var getRam = document.querySelector("#inform-tab").getAttribute("ram");
+        window.location.href=returnUrl+"&ziti_addr_id="+getRam;
     }else{
-        if(myReg.test(returnUrl)){       
-            var getRam = document.querySelector("#inform-tab").getAttribute("ram");
-            window.location.href=returnUrl+"&ziti_addr_id="+getRam;
-        }else{        
-            var getRam = document.querySelector("#inform-tab").getAttribute("ram");
-             window.location.href=returnUrl+"?ziti_addr_id="+getRam;
-        }
+         //console.log("none--没有就加--?");
+        var getRam = document.querySelector("#inform-tab").getAttribute("ram");
+         window.location.href=returnUrl+"?ziti_addr_id="+getRam;
     }
 });
 
@@ -319,13 +322,18 @@ $(".footer-btn").on("tap", function(){
 
 // 弹出层
 $(function(){
-    $(".layer-button").on("tap",function(){
+    $(".layer-close").on("tap",function(){
         $(".layer-infor").hide();
     });
 
     $(".agreement-inform").on("tap",function(){
         $(".layer-infor").show();
     });
+
+    // $(".layer-infor").on("click",function(){
+    //     $(".layer-infor").hide();
+    // });
+
 });
 
 
@@ -340,14 +348,15 @@ function getLocalStorage(){
     var del = query(".inform-List-del");        // 清除
 
     var cc = window.localStorage.getItem("objscc");
+    console.log(cc);
     var ary = [];
     if(cc !== null){
         ary = cc.split(",");
     }else{
         ary = [];
     }
-    oSub.addEventListener('tap',function(){
-    	if(oTxt.value == null || oTxt.value == ""  || oTxt.value == "undefined"){
+    oSub.onclick = function(){
+        if(oTxt.value == null || oTxt.value == ""  || oTxt.value == "undefined"){
             return;
         }
         ary.push(oTxt.value);
@@ -356,16 +365,15 @@ function getLocalStorage(){
         }
         // 设置存储
         window.localStorage.setItem("objscc", ary);
-    },false)
-
+    }
     // 删除存储
-     del.addEventListener('tap',function(){
-     	window.localStorage.clear();
+    del.onclick = function(){
+        window.localStorage.clear();
         $(".inform-List").hide();
-     },false)
-   
+    }
     // 获取数据
     var getRage = window.localStorage.getItem("objscc");
+    //console.log(getRage.length);
     // 截取key里面的数据
     if(getRage == null || getRage == "" || getRage == "undefined"){
         return;
@@ -373,6 +381,7 @@ function getLocalStorage(){
         var strAry = Array();
         var arySplit = getRage.split(",");
         for(var k = 0; k < arySplit.length; k++){
+            console.log(arySplit[k]);
             var Li = document.createElement("li");
             Li.setAttribute("onclick","oHistory(this)");
             var oA = document.createElement("a");
@@ -390,16 +399,3 @@ function oHistory(obj){
     var seachVal = document.querySelector(".navbar-seach");
     seachVal.value = $(obj).children("a").text();
 }
-
-function btBg () {
-		if($('.footer-btn').css('background') ===
-	   'rgb(204, 204, 204) none repeat scroll 0% 0% / auto padding-box border-box'){
-		show.butColor('.footer-btn','touchstart','#a3a3a3','#cccccc');
-		show.butColor('.footer-btn','touchend','#cccccc','#ffffff');
-	} else{
-		show.butColor('.footer-btn','touchstart','#cc7300','#cccccc');
-		show.butColor('.footer-btn','touchend','#ff9000','#ffffff');
-	}
-}
-show.butColor('.layer-button','touchstart','rgb(238,238,238)','#0bb20c');
-show.butColor('.layer-button','touchend','#ffffff','#0bb20c');
