@@ -30,6 +30,7 @@ window.lCalendar = (function() {
             //呼出日期插件
             function popupDate(e) {
                 document.body.style.overflow = 'hidden';
+                alert(document.body.style.overflow);
                 _self.gearDate = document.createElement("div");
                 _self.gearDate.className = "gearDate";
                 _self.gearDate.innerHTML = '<div class="date_ctrl slideInUp">' +
