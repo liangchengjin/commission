@@ -29,6 +29,7 @@ window.lCalendar = (function() {
             var _self = this;
             //呼出日期插件
             function popupDate(e) {
+                document.body.style.height = '100%';
                 document.body.style.overflow = 'hidden';
                 alert(document.body.style.overflow);
                 _self.gearDate = document.createElement("div");
