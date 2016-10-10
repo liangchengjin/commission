@@ -1,6 +1,6 @@
 var productDetail = {
     init:function () {
-        this.mainHeight();
+        // this.mainHeight();
         this.bindEvent();
         this.swiper();
     },
