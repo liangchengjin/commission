@@ -12,6 +12,7 @@ var productDetail = {
         this.bindEvent();
         this.swiper();
         this.statusFn();
+        this.tapFn()
         productDetail.butColor('.btnJump ','touchstart','#cc7300','#cccccc');
 		productDetail.butColor('.btnJump ','touchend','#ff9000','#ffffff');	
     },
@@ -105,24 +106,31 @@ var productDetail = {
             }
         });
     },
-    enterNumber:function () {
+    numberKeyUp:function(){
+	 	$('#number')[0].onkeydown = function(){
+	 		this.value=this.value.replace(/\D/g,'')
+	 	}
+	 },
+	 enterNumber:function () {
         $('#number').on('keyup',function () {
             var number = $('#number').val();
-            if (number) {
+            number = number*1
+            container = container * 1
+//          console.log(number)
                 if (number > 1 && number < container) {
                     $('#reduce').addClass('number-active');
-                	$('#add').removeClass('number-active');
+                	$('#add').addClass('number-active');
                 }else if (number < 1){
-                    $('#reduce').addClass('number-active');
-                    $('#number').val(1);
+                    $('#reduce').removeClass('number-active');
+                    $('#add').addClass('number-active')
+                    $('#number').val('');
                 } else if (number >= container){
-                    $('#add').addClass('number-active');
+                    $('#add').removeClass('number-active');
                 	$('#number').val(container);
+                	$('#reduce').addClass('number-active');
                 } else {
-                	$('#add').removeClass('number-active');
-                	$('#reduce').removeClass('number-active');
+                	$('#add').addClass('number-active');
                 }
-            }
         });
     },
 	reduceNumber:function () {
@@ -131,13 +139,12 @@ var productDetail = {
             number--;
             $('#number').val(number);
             if (number > 1) {
-                $('#reduce').removeClass('number-active');
-                $('#add').removeClass('number-active');
+                $('#reduce').addClass('number-active');
+                $('#add').addClass('number-active');
             }else{
-                $('#reduce').addClass('number-active');        
+                $('#reduce').removeClass('number-active');        
                 $('#number').val(1);
             }
-
         });
     },
     addNumber:function () {
@@ -146,11 +153,11 @@ var productDetail = {
             number++;
             $('#number').val(number);
             if (number >= container) {
-                $('#add').addClass('number-active');
+                $('#add').removeClass('number-active');
                 $('#number').val(container);
             }else{
-                $('#add').removeClass('number-active');
-                $('#reduce').removeClass('number-active');               
+                $('#add').addClass('number-active');
+                $('#reduce').addClass('number-active');   
             }
         });
     },
@@ -183,6 +190,14 @@ var productDetail = {
 		$('#bug').html(txt);
 		$('#bug').removeClass('btnJump');
 		$('#bug').addClass('grayBg');	
+	},
+	tapFn:function(){
+		$('.grayBg').on('tap',function(){
+				$('body').css('position','fixed')
+		})
+		$('.grayBg').blur(function(){
+			$('body').css('position','relative')
+		})
 	}
 }
 $(function () {

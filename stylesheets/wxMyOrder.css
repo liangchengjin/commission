@@ -75,7 +75,6 @@ header>a>i{
     height: .82rem;
     line-height: .82rem;
     background: #FFFFff;
-    border-bottom: 1px solid #bbbbbb;
     position: fixed;
     top: 0.91rem;
     z-index: 999;
@@ -139,7 +138,6 @@ header>a>i{
 .main .tab-content .tab-pane ul li .order-product .product-main .p-img  img {
     width: 1.5rem;
     height: 1.5rem;
-    border: 1px solid #ccc;
     margin-right: 15px;
 
 }
@@ -168,7 +166,6 @@ header>a>i{
     line-height: 0.8rem;
     text-align: right;
     padding: 0 0.24rem;
-    border-bottom: 1px solid #ddd;
 }
 .main .tab-content .tab-pane ul li .order-sum .order-price{
     font-size: .36rem;
@@ -254,4 +251,39 @@ span.need-mes {
     color: #333;
     bottom: 0.4rem;
     padding: 0 0.24rem;
+}
+/*细化border*/
+.line-border{
+	position:relative;
+}
+.line-border:after{
+	width:200%;
+	height:200%;
+	position:absolute;
+	top:0;
+	left:0;
+	z-index:0;
+	content:"";
+	-webkit-transform:scale(0.5);
+	-webkit-transform-origin:0 0;
+	transform:scale(0.5);
+	transform-origin:0 0;
+	}
+.border-t:after{
+	border-top: 1px solid #ededed;
+}
+.border-b:after{
+	border-top: 1px solid #bbb;
+}
+.border-d:after{
+	border-top: 1px solid #ddd;
+}
+.order-line{
+	position: fixed;
+    top: 1.74rem;
+    z-index: 999;
+    width: 100%;
+}
+.border-around:after{
+	border: 1px solid #ccc;
 }

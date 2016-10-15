@@ -110,10 +110,9 @@ header .titleTxt{
   padding-top: 0.34rem;
   float: left;
 }
-.good-message-wrap .good-message > div > img {
+.good-message-wrap .good-message > div img {
   width: 1.68rem;
   height: 1.68rem;
-  border: 1px solid #cccccc;
 }
 .good-message-wrap .good-message .line {
   border-top: 1px solid #cccccc;
@@ -174,3 +173,23 @@ header .titleTxt{
   outline: none;
 }
 /*footer end */
+/*细化border*/
+.line-border{
+	position:relative;
+}
+.line-border:after{
+	width:200%;
+	height:200%;
+	position:absolute;
+	top:0;
+	left:0;
+	z-index:0;
+	content:"";
+	-webkit-transform:scale(0.5);
+	-webkit-transform-origin:0 0;
+	transform:scale(0.5);
+	transform-origin:0 0;
+	}
+.border-around:after{
+	border: 1px solid #ccc;
+}

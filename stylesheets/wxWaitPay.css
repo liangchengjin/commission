@@ -40,7 +40,7 @@ body {
 .countSum-wrap,.leave-message-wrap {
   background: #ffffff;
   margin-top: 0.16rem;
-  border-bottom: 1px solid #cccccc;
+ /* border-bottom: 1px solid #cccccc;*/
   display: block;
   width: 100%;
   height: auto;
@@ -66,9 +66,9 @@ body {
 	font-size: .32rem;
     color: #999999;
 }
-.line {
+/*.line {
   border-bottom: 1px solid #dddddd;
-}
+}*/
 .content:first-child .name {
   text-align: right;
 }
@@ -111,10 +111,13 @@ body {
   padding: 0.34rem 0 0 0.24rem;
   float: left;
 }
-.good-message-wrap .good-message > div > img {
+.wx-border{
+	width: 1.5rem;
+	height: 1.5rem;
+}
+.good-message-wrap .good-message > div  img {
   width: 1.5rem;
   height: 1.5rem;
-  border: 1px solid #cccccc;
 }
 .good-message-wrap .good-message .good-message-content {
   font-size: 0.3rem;
@@ -224,7 +227,7 @@ body {
   width: 100%;
   height: 1rem;
   background: #fff;
-  border-top: 1px solid #cccccc;
+/*  border-top: 1px solid #cccccc;*/
   position: fixed;
   left: 0;
   bottom: 0;
@@ -259,4 +262,38 @@ body {
 .hidden{
 	display: none;
 }
+.special{
+	color: #ccc !important;
+}
 /*footer end */
+
+/*细化border*/
+.line-border{
+    position:relative;
+}
+.line-border:after{
+    width:200%;
+    height:200%;
+    position:absolute;
+    top:0;
+    left:0;
+    z-index:0;
+    content:"";
+    -webkit-transform:scale(0.5);
+    -webkit-transform-origin:0 0;
+    transform:scale(0.5);
+    transform-origin:0 0;
+}
+.border-d:after{
+    border-top: 1px solid #ddd;
+}
+.border-c:after{
+    border-top: 1px solid #ccc;
+}
+.border-around:after{
+	border: 1px solid #ccc;
+}
+.wait-pay-border {
+    position: fixed;
+    bottom: 1rem;
+}

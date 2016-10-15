@@ -1,192 +1,268 @@
-﻿<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>商品详情</title>
-   	<link rel="stylesheet" href="stylesheets/common/reset.css" type="text/css"/>
-	<link rel="stylesheet" href="stylesheets/common/iconfont.css" type="text/css" />
-    <link href="stylesheets/common/swiper.min.css" rel="stylesheet">
-    <link href="stylesheets/singleProduct.css" rel="stylesheet">
-    <link rel="stylesheet" href="stylesheets/common/alert.css" />
-    <script src="script/common/adaptive.js" type="text/javascript"></script>
-    <script>
-        window['adaptive'].desinWidth = 750;
-        window['adaptive'].baseFont = 18;
-        window['adaptive'].maxWidth = 480;
-        window['adaptive'].init();
-    </script>
-</head>
-<body>
-<input type="hidden" name="starttimestamp" id="starttimestamp" value="1474508955" />
-<input type="hidden" name="endtimestamp" id="endtimestamp" value="1474508965"/>
-<div class="container">
-    <div class="main">
-        <div class="product">
-            <div class="p-contain" >
-                <div class="swiper-container">
-                    <div class="swiper-wrapper">
-                        <div class="swiper-slide">
-                            <img src="images/pro0.png">
-                        </div>
-                        <div class="swiper-slide">
-                            <img src="images/pro1.png">
-                        </div>
-                        <div class="swiper-slide">
-                            <img src="images/pro2.png">
-                        </div>
-                    </div>
-                    <div class="swiper-pagination"></div>
-                </div>
-            </div>
-			<div class="p-time">
-				<span class="package-special">¥<span class="price">32.50</span></span>
-				<div class="center">
-					<dl class="package-original">¥<span class="old-price">39.00</span></dl>
-					<dt class="remain">还剩<span class="sum">200</span>件</dt>
-				</div>
-				<div class="right">
-					<dl>距<span class="status"></span>还剩</dl>
-					<dt>
-						<span class="timeBg day">00</span>
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>抢购活动详情</title>
+		<meta name="keywords" content="">
+		<meta name="format-detection" content="telephone=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+		<link rel="stylesheet" href="stylesheets/common/reset.css" type="text/css"/>
+		<link rel="stylesheet" href="stylesheets/common/iconfont.css" type="text/css" />
+		<link rel="stylesheet" href="stylesheets/common/alert.css" />
+		<link rel="stylesheet" href="stylesheets/hotActive.css" type="text/css"/>
+		<script type="text/javascript" src="script/common/adaptive.js"></script>
+		<script type="text/javascript">
+			window['adaptive'].desinWidth = 750;
+			window['adaptive'].baseFont = 18;
+			window['adaptive'].maxWidth = 480;
+			window['adaptive'].init();
+		</script>
+	</head>
+	<body>
+		<div class="content-wrap">
+			<header>
+				<span class="line"></span>
+				<p class="left"><span class="left-txt"></span><span class="dot">...</span></p>
+				<div class="right">距<span class="status">开始 </span>
+					<div class="txt-wrap">
+						<span class="timeBg day">05</span>
 						<span class="txt">天</span>
 						<span class="timeBg hour">00</span>
 						<span class="txt">:</span>
-						<span class="timeBg minute">00</span>
+						<span class="timeBg minute">55</span>
 						<span class="txt">:</span>
-						<span class="timeBg sec">00</span>
-					</dt>
+						<span class="timeBg sec">35</span>
+					</div>
 				</div>
-				
-			</div>
-            <div class="p-header">
-                   <div class="p-package">
-                       <span class="package-name">小麦一喷三防套餐（春耕解决方案详情)</span>           
-                   </div>
-            </div>
-
-            <div class="p-info">
-                <div class="single-info">
-                	<span class="sales">促销</span>
-                	<dl>
-                		<span class="sales-wrap">限购 </span>
-                		<span class="sales-r">本活动期内每人限购<span class="restrict">10</span>件</span>
-                	</dl>
-                	<dt>
-       					<span class="sales-wrap">限量</span>
-                		<span class="sales-r">本活动仅售<span class="commodity">1000</span>件商品</span>         		
-                	</dt>   
-                </div>
-            </div>
-            <div class="p-main">
-            	<span class="single-brand">品牌：<span>瑞德丰</span></span>
-                <span class="single-rule">规格: <span>300克/瓶</span></span>
-            </div>
-            
-            <div class="p-detail">
-                <ul id="myTab" class="tab inform-list">
-                    <li>
-                        <a href="javascript:void (0);" data-toggle="tab">商品详情</a>
-                        <i class="line"></i>
-                    </li>
-                    <li><a href="javascript:void (0);" data-toggle="tab">商品参数</a></li>
-                </ul>
-                <div id="myTabContent" class="tab-content">
-                    <div class="tab-pane" id="product-info">
-                        <div class="empty">
-                            <p class="tip">商品描述暂未添加</p>
-				<p class="tip">商品描述暂未添加</p>
-				<p class="tip">商品描述暂未添加</p>
-				<p class="tip">商品描述暂未添加</p>
-				<p class="tip">商品描述暂未添加</p>
-				<p class="tip">商品描述暂未添加</p>
-				<p class="tip">商品描述暂未添加</p>
-				<p class="tip">商品描述暂未添加</p>
-				<p class="tip">商品描述暂未添加</p>
-				<p class="tip">商品描述暂未添加</p>
-				<p class="tip">商品描述暂未添加</p>
-				<p class="tip">商品描述暂未添加</p>
-				<p class="tip">商品描述暂未添加</p>
-				<p class="tip">商品描述暂未添加</p>
-				<p class="tip">商品描述暂未添加</p>
-				<p class="tip">商品描述暂未添加</p>
-				<p class="tip">商品描述暂未添加</p>
-				<p class="tip">商品描述暂未添加</p>
-				<p class="tip">商品描述暂未添加</p>
-				<p class="tip">商品描述暂未添加</p>
-				<p class="tip">商品描述暂未添加</p>
-				<p class="tip">商品描述暂未添加</p>
-				<p class="tip">商品描述暂未添加</p>
-				<p class="tip">商品描述暂未添加</p>
-				<p class="tip">商品描述暂未添加</p>
-				<p class="tip">商品描述暂未添加</p>
-				<p class="tip">商品描述暂未添加</p>
-				
+			</header>
+			<section class="content">
+				<div class="container-wrap">
+					<section class="container border-t line-border" itemId = '1' skuId = '1'>
+						<a url='09'>
+						<div class="img">
+							<img src="images/adB.png" alt="" />
+						</div>
+						<div class="container-right">
+							<h3>优比乐n1优比乐n1优比乐n1优比乐优比乐n1优比乐n1</h3>
+							<p class="num">限购<span class="amounts">3</span>件</p>
+							<dl>
+								<p class="price">活动价
+									<span>¥<span class="money">88</span></span>
+								</p>
+							</dl>
+							<dt>
+								<p class="oldPrice">原价
+									<span class="a">¥<span class="oldMoney">120</span></span>
+								</p>
+							</dt>							
+							<span class="residue gray">敬请关注</span>
+							<span class="residues none">仅剩<span class="amount">200</span>件</span>
+							<span class="grabOver none">
+								<span class="hours">1</span>小时<span class="mins">23</span>分全部抢光
+							</span>
+						</div>
+						</a>
+						<button type="button" class="grabNow grayBg btnJump" stus= "5"></button>
+					</section>
+					<section class="container" class="container" itemId = '1' skuId = '1'>
+						<a url='09'>
+						<div class="img">
+							<img src="images/adB.png" alt="" />
+						</div>
+						<div class="container-right">
+							<h3>优比乐n1优比乐n1优比乐n1优比乐优比乐n1优比乐n1</h3>
+							<p class="num">限购<span class="amounts">5</span>件</p>
+							<dl>
+								<p class="price">活动价
+									<span>¥<span class="money">88</span></span>
+								</p>
+							</dl>
+							<dt>
+								<p class="oldPrice">原价
+									<span class="a">¥<span class="oldMoney">120</span></span>
+								</p>
+							</dt>							
+							<span class="residue gray">敬请关注</span>
+							<span class="residues none">仅剩<span class="amount">200</span>件</span>
+							<span class="grabOver none">
+								<span class="hours">1</span>小时<span class="mins">23</span>分全部抢光
+							</span>
+						</div>
+						</a>
+						<button type="button" class="grabNow grayBg btnJump" stus="7"></button>
+					</section>
+					<section class="container"  itemId = '1' skuId = '1'>
+						<a url='10'>
+							<div class="img">
+								<img src="images/adB.png" alt="" />
+							</div>
+							<div class="container-right">
+								<h3>优比乐n1优比乐n1优比乐n1优比乐优比乐n1优比乐n1</h3>
+								<p class="num">限购<span class="amounts">1</span>件</p>
+								<dl>
+									<p class="price">活动价
+										<span>¥<span class="money">88</span></span>
+									</p>
+								</dl>
+								<dt>
+									<p class="oldPrice">原价
+										<span class="a">¥<span class="oldMoney">120</span></span>
+									</p>
+								</dt>
+								<span class="residue gray">敬请关注</span>
+								<span class="residues none">仅剩<span class="amount">200</span>件</span>
+								<span class="grabOver none">
+									<span class="hours">1</span>小时<span class="mins">23</span>分全部抢光
+								</span>
+							</div>
+						</a>
+						<button type="button" class="grabNow grayBg btnJump"stus=""></button>
+					</section>
+					<section class="container">
+						<a url='11'>
+							<div class="img">
+								<img src="images/adB.png" alt="" />
+							</div>
+							<div class="container-right">
+								<h3>优比乐n1优比乐n1优比乐n1优比乐优比乐n1优比乐n1</h3>
+								<p class="num">限购<span class="amounts">1</span>件</p>
+								<dl>
+									<p class="price">活动价
+										<span>¥<span class="money">88</span></span>
+									</p>
+								</dl>
+								<dt>
+									<p class="oldPrice">原价
+										<span class="a">¥<span class="oldMoney">120</span></span>
+									</p>
+								</dt>
+								<span class="residue gray">敬请关注</span>
+								<span class="residues none">仅剩<span class="amount">200</span>件</span>
+								<span class="grabOver none">
+									<span class="hours">1</span>小时<span class="mins">23</span>分全部抢光
+								</span>
+							</div>
+						</a>
+						<button type="button" class="grabNow grayBg btnJump"stus= "5"></button>
+					</section>
+					<section class="container">
+						<a url='12'>
+						<div class="img">
+							<img src="images/adB.png" alt="" />
+						</div>
+						<div class="container-right">
+							<h3>优比乐n1优比乐n1优比乐n1优比乐优比乐n1优比乐n1</h3>
+							<p class="num">限购<span class="amounts">3</span>件</p>
+							<dl>
+								<p class="price">活动价
+									<span>¥<span class="money">88</span></span>
+								</p>
+							</dl>
+							<dt>
+								<p class="oldPrice">原价
+									<span class="a">¥<span class="oldMoney">120</span></span>
+								</p>
+							</dt>
+								<span class="residue gray">敬请关注</span>
+								<span class="residues none">仅剩<span class="amount">200</span>件</span>
+								<span class="grabOver none">
+									<span class="hours">1</span>小时<span class="mins">23</span>分全部抢光
+								</span>
+						</div>
+						</a>
+						<button type="button" class="grabNow grayBg btnJump"stus= "3"></button>
+					</section>
+					<section class="container">
+						<a url='113'>
+						<div class="img">
+							<img src="images/adB.png" alt="" />
+						</div>
+						<div class="container-right">
+							<h3>优比乐n1优比乐n1优比乐n1优比乐优比乐n1优比乐n1</h3>
+							<p class="num">限购<span class="amounts">1</span>件</p>
+							<dl>
+								<p class="price">活动价
+									<span>¥<span class="money">88</span></span>
+								</p>
+							</dl>
+							<dt>
+								<p class="oldPrice">原价
+									<span class="a">¥<span class="oldMoney">120</span></span>
+								</p>
+							</dt>		
+								<span class="residue gray">敬请关注</span>
+								<span class="residues none">仅剩<span class="amount">200</span>件</span>
+								<span class="grabOver none">
+									<span class="hours">1</span>小时<span class="mins">23</span>分全部抢光
+								</span>
+						</div>
+						</a>
+						<button type="button" class="grabNow grayBg btnJump"stus= "6"></button>
+					</section>
+					<section class="container">
+						<a url='114'>
+						<div class="img">
+							<img src="images/adB.png" alt="" />
+						</div>
+						<div class="container-right">
+							<h3>优比乐n1优比乐n1优比乐n1优比乐优比乐n1优比乐n1</h3>
+							<p class="num">限购<span class="amounts">10</span>件</p>
+							<dl>
+								<p class="price">活动价
+									<span>¥<span class="money">88</span></span>
+								</p>
+							</dl>
+							<dt>
+								<p class="oldPrice">原价
+									<span class="a">¥<span class="oldMoney">120</span></span>
+								</p>
+							</dt>							
+								<span class="residue gray">敬请关注</span>
+								<span class="residues none">仅剩<span class="amount">200</span>件</span>
+								<span class="grabOver none">
+									<span class="hours">1</span>小时<span class="mins">23</span>分全部抢光
+								</span>
+						</div>
+						</a>
+						<button type="button" class="grabNow grayBg btnJump" stus= ""></button>
+					</section>
+				</div>
+				<div class="attention">
+					<h3>注意</h3>
+					<p>1.每个人只可以参与一次活动</p>
+					<p>2.请事先绑定微信钱包，避免无法支付的情况</p>
+					<p>3.抢购前请确认收货人和提货点，可在个人中心-设置-收货人管理/提货点管理中操作</p>
+					<p>4.购买后如需售后服务,请联系客服电话139000000</p>
+				</div>
+				<div class="hint none">该商品已经抢光</div>
+				<div class="alert-wrap none">
+					<div class="alert">
+						<div class="amount-main">
+							<div class="restriction">限购<span>3</span>件</div>
+							<div class="addContent">
+								<a id="reduce" class="number-active"><i class="iconfont icon-iconfontminus"></i></a>
+	                            <input value="" id="number" type="number">
+	                            <a id="add"><i class="iconfont icon-iconfollow01default"></i></a>
+	                            <i class="iconfont icon-iconclose01default back"></i>
+							</div>          
+                       </div> 
+                        <div class="btn-foot btnJump line-border border-b">
+                        	去付款
                         </div>
-                    </div>
-                    <div class="tab-pane tab-active" id="product-param">
-                        <div class="empty">
-
-                            <p class="tip">描述暂未添加</p>
-                            <p class="tip">描述暂未添加</p>
-                            <p class="tip">描述暂未添加</p>
-                            <p class="tip">描述暂未添加</p>
-                            <p class="tip">商品描述暂未添加</p>
-                            <p class="tip">商品描述暂未添加</p>
-                            <p class="tip">商品描述暂未添加</p>
-                            <p class="tip">商品描述暂未添加</p>
-                            <p class="tip">商品描述暂未添加</p>
-                            <p class="tip">商品描述暂未添加</p>
-                            <p class="tip">商品描述暂未添加</p>
-                            <p class="tip">商品描述暂未添加</p>
-                            <p class="tip">商品描述暂未添加</p>
-                            <p class="tip">商品描述暂未添加</p>
-                            <p class="tip">商品描述暂未添加</p>
-                            <p class="tip">商品描述暂未添加</p>
-                            <p class="tip">商品描述暂未添加</p>
-                            <p class="tip">商品描述暂未添加</p>
-                            <p class="tip">商品描述暂未添加</p>
-                            <p class="tip">商品描述暂未添加</p>
-                            <p class="tip">商品描述暂未添加</p>
-                            <p class="tip">商品描述暂未添加</p>
-                            <p class="tip">商品描述暂未添加</p>
-                            <p class="tip">商品描述暂未添加</p>
-                            <p class="tip">商品描述暂未添加</p>
-                            <p class="tip">商品描述暂未添加</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-
-    </div>
-</div>
-<footer class="footer">
-    <div class="footer-container-fluid">
-        <div class="amount">
-            <table>
-                <tr>
-                    <td>购买数量</td>
-                    <td>
-                        <div class="amount-main">
-                            <a id="reduce" class="number-active"><i class="iconfont icon-iconfontminus"></i></a>
-                            <input type="text" value="1" id="number">
-                            <a id="add"><i class="iconfont icon-iconfollow01default"></i></a>
-                        </div>
-                    </td>
-                </tr>
-            </table>
-
-        </div>
-        <div class="footer-nav">
-            <a href="#">
-                <button type="button" class="footer-btn btnJump" id="bug" stus= "1"></button>
-            </a>
-        </div>
-    </div>
-</footer>
-</body>
-<script src="script/common/zepto.min.js" type="text/javascript"></script>
-<script src="script/common/swiper.min.js" type="text/javascript"></script>
-<script src="script/wxSingleProduct.js" type="text/javascript"></script>
+					</div>
+				</div>
+			</section>
+		</div>
+		<input type="hidden" name="starttimestamp" id="starttimestamp" value="1465040886" />
+ 		<input type="hidden" name="endtimestamp" id="endtimestamp" value="1485540906" />
+ 		<input type="hidden" name="token" id="token" value="38" />
+ 		<input type="hidden" name="activityId" id="activityId" value="5"/>
+ 		<input type="hidden" name="orderUrl" id="orderUrl" value="http://trade.api.tunnel.2bdata.com/Snapup/Order/index"/>		
+ 		<input type="hidden" name="url" id="url" value="http://172.168.6.221/index.php/payment.html?"/>		
+		<script type="text/javascript" src="script/common/zepto.min.js"></script>
+		<script type="text/javascript" src="script/common/wxLoading.js"></script>
+		<script type="text/javascript" src="script/hotActive.js"></script>
+	</body>
 </html>

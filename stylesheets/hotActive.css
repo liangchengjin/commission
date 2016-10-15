@@ -34,7 +34,7 @@ header{
     left: 0.09rem;
 }
  .right{
-	font-size: 0.3rem;
+	font-size: 0.28rem;
 	color: #333333;
 	line-height: 0.9rem;
 	box-sizing: border-box;
@@ -44,12 +44,12 @@ header{
 .timeBg{
 	border-radius: 0.06rem;
     color: #fff;
-    font-size: 0.3rem;
+    font-size: 0.28rem;
     background: #333333;
     padding: 0.01rem;
     float: left;
     height: 0.32rem;
-    width: 0.32rem;
+    width: 0.4rem;
     line-height: 0.32rem;
     margin-top: 0.27rem;
     text-align: center;
@@ -111,7 +111,7 @@ header{
 }
 .container-right .price{
 	color: #ff9000;
-	font-size: 0.3rem;
+	font-size: 0.28rem;
 }
 .container-right .money{
 	font-size: 0.42rem;
@@ -370,4 +370,7 @@ dt .oldPrice{
 }
 .border-b:after{
 	border-top: 1px solid #d5d5d6;
+}
+.fixed{
+	position: fixed !important;
 }

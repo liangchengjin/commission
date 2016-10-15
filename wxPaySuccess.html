@@ -37,10 +37,16 @@
     <div class="content">
         <div class="message">
             <i class="iconfont icon-iconwodedefault"></i>
-            <span class="person">收货人</span>  
-            <span class="chose">选择
+            <span class="person">收货人</span>
+           			<span class="name">万真真
+             		 	<span class="mobile">4433646464</span>
+                   </span>
+            <span class="chose" id="name">选择
             	<i class="iconfont icon-iconmoredefault"></i>
             </span>
+            <span class="chose special">更改
+             	<i class="iconfont icon-iconmoredefault"></i>
+             </span>
         </div>
         <div class="line"></div>
     </div>
@@ -48,7 +54,13 @@
         <div class="message">
             <i class="iconfont icon-icon28"></i>
             <span class="person">自提点</span>
-             <span class="chose">选择
+            		<span class="address">     
+                		 <span class="mobile"></span>
+                	</span>
+             <span class="chose" id="address">选择
+             	<i class="iconfont icon-iconmoredefault"></i>
+             </span>
+             <span class="chose special">更改
              	<i class="iconfont icon-iconmoredefault"></i>
              </span>
         </div>
@@ -58,7 +70,11 @@
     <div id="goodMes-content">
         <div class="good-message">
             <div class="lines"></div>
-            <div class="imgDiv"><img src="images/goods.png"></div>
+            <div class="imgDiv">
+            	<div class="wx-border line-border border-around">
+            		<img src="images/goods.png">
+            	</div>
+            </div>
             <div class="good-message-content">
                 <div class="left">
                     <p class="goodsName">小麦麦麦麦一碰三防套餐产品组合 (春耕解决方案 ) </p>
@@ -147,11 +163,17 @@
     <div class="countSum">
         <span class="sum">合计：</span>
         <span class="price">¥32.50</span>
-        <button class="order">确认</button>
+        <button class="order" type="button" id="ss">确认</button>
     </div>
 </div>
     <script src="script/common/zepto.min.js"></script>
     <script type="text/javascript" src="script/common/utls.js"></script>
     <script src="script/wxWaitPay.js"></script>
+    <script type="text/javascript">
+    $('#ss').attr('disabled','disabled')
+    	$('#ss').on('tap',function(){  		
+    		console.log(1)
+    	})
+    </script>
 </body>
 </html>

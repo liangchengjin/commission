@@ -82,7 +82,10 @@ var hotActive = {
 	btnEvent:function(){
 		$('.back').on('tap',function(){
 			$('.alert-wrap').addClass('none')
-			document.body.style.overflow='auto'
+			$('.content-wrap').removeClass('fixed')
+//			$('body').css('overflow','auto');
+//			$('html').css('overflow','auto');
+//			document.body.style.overflow='auto'
 			
 		})
 		$('.grabNow').on('tap',function(){
@@ -120,7 +123,9 @@ var hotActive = {
 					$('#number')[0].value = $(this).prev().find('.amounts').html();
 					$('.restriction>span').html($(this).prev().find('.amounts').html())
 					$('.alert-wrap').removeClass('none')
-					document.body.style.overflow='hidden'	
+					$('.content-wrap').addClass('fixed')
+//					$('body').css('overflow','hidden');
+//					$('html').css('overflow','hidden');
 				} else{
 					containers = 1
 				}
@@ -155,7 +160,9 @@ var hotActive = {
         $('.btn-foot').on('tap',function(){        	
         	hotActive.jumpHref();
         	$('.alert-wrap').addClass('none')
-        	document.body.style.overflow='auto'
+        	$('.content-wrap').removeClass('fixed')
+//      	$('body').css('overflow','auto');
+//			$('html').css('overflow','auto');
         	container = $('#number').val()
         })
 	 }, 

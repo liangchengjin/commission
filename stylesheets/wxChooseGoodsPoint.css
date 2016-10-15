@@ -85,7 +85,9 @@
   color: #333333;
 }
 .inform-tab tr td > p:last-child {
-  display: initial;
+  /*display: initial;*/
+  display:inline-block;
+  width:100%;
 }
 .inform-tab tr td > p > span:first-child {
   margin-right: 0.46rem;
@@ -149,7 +151,7 @@
   color: #333 !important;
 }
 .inform-input .inform-user-name {
-  width: 90%;
+  width: 83%;
   height: 1rem;
   line-height: 1rem;
   font-family: "微软雅黑", "Droid Sans Fallback";
@@ -266,10 +268,16 @@ a#footer-btn {
     text-align: center;
     line-height: 1rem;
 }
-.inform-tab tr td:nth-child(2){
+/*.inform-tab tr td:nth-child(2){
 	  padding-left: 0;
     text-align: left;
     border-bottom: 1px solid #ddd;
+}*/
+
+.inform-tab tr nth-child(2) td:nth-child(2){
+	  padding-left: 0;
+    text-align: left;
+    border-bottom: none;
 }
 .footer-btn-orang{
   background:#ff9000;

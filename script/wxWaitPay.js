@@ -54,3 +54,23 @@ function run(){
 	(s < 10)? (s = '0' + s) : (s = s);
     $('.time').html(m+"分钟"+s+"秒");
 }
+
+//支付成功选择更改判断
+var blankStr = document.querySelector('.address').innerText;
+var blankN = document.querySelector('.name').innerText;
+blankStr = blankStr.replace(/\s+/g,"");   
+blankN = blankN.replace(/\s+/g,"");
+if(blankStr !== ''){
+	$('#address').addClass('hidden');
+	$($('.special')[1]).removeClass('hidden');
+} else if(blankStr === ''){
+	$('#address').removeClass('hidden');
+	$($('.special')[1]).addClass('hidden');
+}
+if(blankN !== ''){
+	$('#name').addClass('hidden');
+	$($('.special')[0]).removeClass('hidden');
+} else if(blankN === ''){
+	$('#name').removeClass('hidden');
+	$($('.special')[0]).addClass('hidden');
+}

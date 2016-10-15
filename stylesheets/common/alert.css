@@ -32,7 +32,7 @@
 .ui-dialog-cnt {
     color: #333333;
     margin: 0 auto;
-    margin-top: 61%;
+    margin-top: 50%;
     width: 80%;
     background-color: #fafafc;
     font-size: 0.3rem;
@@ -157,3 +157,45 @@
 	line-height: 0.26rem;
 }
 /* -- 加载中 --*/
+
+/*提示语css*/
+.hint-common{
+  	position: fixed;  
+  	top: 0;
+  	left: 30%;
+  	top: 47% ;
+	width: 3rem;
+    text-align: center;
+    color: #fff;
+    font-size: 0.3rem;
+    z-index: 999;
+    height: 0.8rem;
+    border-radius: 0.4rem;
+    line-height: 0.8rem;
+    background: rgba(40, 40, 40, 0.75);
+    animation:bottom-common linear 2s forwards;
+}
+@keyframes bottom-common
+{
+	0%   {background: rgba(40, 40, 40, 0);}
+	50%  {background: rgba(40, 40, 40, 0.45)}
+	100% {background: rgba(40, 40, 40, 0.75)}
+}
+@-webkit-keyframes bottom-common
+{
+	0%   {background: rgba(40, 40, 40, 0);}
+	50%  {background: rgba(40, 40, 40, 0.45)}
+	100% {background: rgba(40, 40, 40, 0.75)}
+}
+@-o-keyframes bottom-common
+{
+	0%   {background: rgba(40, 40, 40, 0);}
+	50%  {background: rgba(40, 40, 40, 0.45)}
+	100% {background: rgba(40, 40, 40, 0.75)}
+}
+@-moz-keyframes bottom-common
+{
+	0%   {background: rgba(40, 40, 40, 0);}
+	50%  {background: rgba(40, 40, 40, 0.45)}
+	100% {background: rgba(40, 40, 40, 0.75)}
+}
