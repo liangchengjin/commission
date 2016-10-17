@@ -213,22 +213,23 @@
 			$('#empty').show();
 		}
 
-		$('body').on("touchmove", function(event){
-			var touch = event.targetTouches[0];
-			srollFn(this);
-		});
+		$('.commission-day').on("touchend", function(event){
+			srollFn();
+			return;
+		})
 	});
 	var i = 1;
-	function srollFn(self) {
+	function srollFn() {
 		var hei = $(document).height() -  window.innerHeight;
 		if ( document.body.scrollTop >= hei) {
 			//加载更多
 			i +=1;
-			if (i <= 4){
+			if (i <=2){
 //				get_data(i);
-				console.log(0);
+				alert(0);
+				
 			}else {
-				console.log(2);
+				show.toast('没有更多数据了！')
 			}
 		}
 	}
