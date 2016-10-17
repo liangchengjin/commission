@@ -193,8 +193,17 @@ section{
 	float: right;
 	/*padding-right: 0.24rem;*/
 }
+.day-txt-wrap .price.total-price{
+	position: absolute;
+	right: 0;
+	top: 0;
+	padding-top: 0.08rem;
+
+}
+
 .commission-day .day-txt-wrap .format{
 	padding-top: 0.12rem;
+	position: relative;
 }
 .commission-day .day-txt-wrap .format>span{
 	color: #666;
