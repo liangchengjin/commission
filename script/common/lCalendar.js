@@ -51,9 +51,9 @@ window.lCalendar = (function() {
                     '</div>' +
                     '</div>' +
                     '<div class="bottom-d line-border"></div>'+
-                    '<div class="date_btn_box line-border">' +
+                    '<div class="date_btn_box">' +
                     '<div class="date_btn lcalendar_cancel">取消</div>' +
-                    '<div class="date_btn lcalendar_finish  boder-left">确定</div>' +
+                    '<div class="date_btn lcalendar_finish line-border boder-left">确定</div>' +
                     '</div>' +
                     '</div>';
                 document.body.appendChild(_self.gearDate);
