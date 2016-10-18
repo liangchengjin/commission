@@ -238,6 +238,9 @@ section{
 	transform:scale(0.5);
 	transform-origin:0 0;
 }
+/*.line-borer:after{*/
+	/*border-top: 1px solid #ddd;*/
+/*}*/
 .sum-line{
 	display: inline-block;
 	width: 1px;
@@ -262,6 +265,9 @@ section{
 .bottom,.bottom-d,.bottom-top{
 	float: left;
 	width: 100%;
+}
+.btn-top:after{
+	border-top: 1px solid #ddd;
 }
 .top,.boder-left{
 	width: 100%;
