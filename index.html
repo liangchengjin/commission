@@ -213,7 +213,7 @@
 			$('#empty').show();
 		}
 
-		$('section').on("touch", function(event){
+		$('.commission-day').on("touchend", function(event){
 			srollFn();
 		})
 	});
@@ -228,7 +228,7 @@
 				alert(0);
 
 			}else {
-				show.toast('没有更多数据了！')
+				alert(1);
 			}
 		}
 	}
