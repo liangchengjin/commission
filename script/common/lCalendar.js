@@ -50,7 +50,7 @@ window.lCalendar = (function() {
                     '</div>' +
                     '</div>' +
                     '</div>' +
-                    '<div class="btn-top line-border"><div>' +
+                    '<div class="btn-top line-border"></div>' +
                     '<div class="date_btn_box">' +
                     '<div class="date_btn lcalendar_cancel">取消</div>' +
                     '<div class="date_btn lcalendar_finish line-border boder-left">确定</div>' +
