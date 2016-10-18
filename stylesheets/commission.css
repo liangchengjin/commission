@@ -266,6 +266,9 @@ section{
 	float: left;
 	width: 100%;
 }
+.btn-top{
+	width: 100%;
+}
 .btn-top:after{
 	border-top: 1px solid #ddd;
 }
